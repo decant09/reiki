@@ -113,17 +113,30 @@ The project board can viewed [here](https://github.com/users/decant09/projects/8
 #### Wireframes
 Wireframes were created for the website layout.
 <details>
-<summary>Page</summary>
-<img src="static/images/readme/wireframes/image.png">
+<summary>Landing Page</summary>
+<img src="media/readme/wireframes/landing_page.png">
 </details>
 <details>
-<summary>Page</summary>
-<img src="static/images/readme/wireframes/image.png">
+<summary>Landing Page Mobile</summary>
+<img src="media/readme/wireframes/landing_page_mobile.png">
 </details>
 <details>
-<summary>Page</summary>
-<img src="static/images/readme/wireframes/image.png">
+<summary>Biography Page</summary>
+<img src="media/readme/wireframes/biography.png">
 </details>
+<details>
+<summary>Reviews Page</summary>
+<img src="media/readme/wireframes/reviews.png">
+</details>
+<details>
+<summary>Blog List Page</summary>
+<img src="media/readme/wireframes/blog_list.png">
+</details>
+<details>
+<summary>Blog Detail Page</summary>
+<img src="media/readme/wireframes/blog_detail.png">
+</details>
+
 
 
 #### Database Schema
