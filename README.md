@@ -129,6 +129,70 @@ Wireframes were created for the website layout.
 <img src="media/readme/wireframes/reviews.png">
 </details>
 <details>
+<summary>About Page</summary>
+<img src="media/readme/wireframes/about_reiki.png">
+</details>
+<details>
+<summary>Product List Page</summary>
+<img src="media/readme/wireframes/product_list.png">
+</details>
+<details>
+<summary>Product Detail Page</summary>
+<img src="media/readme/wireframes/product_detail.png">
+</details>
+<details>
+<summary>Product Detail Page Mobile</summary>
+<img src="media/readme/wireframes/product_detail_mobile.png">
+</details>
+<details>
+<summary>Add or Update Product Page</summary>
+<img src="media/readme/wireframes/add_or_update_product.png">
+</details>
+<details>
+<summary>Contact Page</summary>
+<img src="media/readme/wireframes/contact.png">
+</details>
+<details>
+<summary>FAQ Page</summary>
+<img src="media/readme/wireframes/faq.png">
+</details>
+<details>
+<summary>Register Page</summary>
+<img src="media/readme/wireframes/register.png">
+</details>
+<details>
+<summary>Login Page</summary>
+<img src="media/readme/wireframes/login.png">
+</details>
+<details>
+<summary>Logout Page</summary>
+<img src="media/readme/wireframes/logout.png">
+</details>
+<details>
+<summary>Profile Page</summary>
+<img src="media/readme/wireframes/profile.png">
+</details>
+<details>
+<summary>Cart Page</summary>
+<img src="media/readme/wireframes/cart.png">
+</details>
+<details>
+<summary>Cart Page Mobile</summary>
+<img src="media/readme/wireframes/cart_mobile.png">
+</details>
+<details>
+<summary>Checkout Page</summary>
+<img src="media/readme/wireframes/checkout.png">
+</details>
+<details>
+<summary>Checkout Success Page</summary>
+<img src="media/readme/wireframes/checkout_success.png">
+</details>
+<details>
+<summary>Error Page</summary>
+<img src="media/readme/wireframes/error.png">
+</details>
+<details>
 <summary>Blog List Page</summary>
 <img src="media/readme/wireframes/blog_list.png">
 </details>
