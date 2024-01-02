@@ -608,13 +608,13 @@ The site was deployed to Heroku and the following steps were followed to do so:
 - Add the secret key just created to the Heroku Config Vars as SECRET_KEY for the KEY value and the secret key value you created as the VALUE.
 - In the settings.py file within the django app, import Path from pathlib, import os and import dj_database_url.
 - Insert the line:
-  -  if os.path.isfile("env.py"): import env
+  - if os.path.isfile("env.py"): iport env
 - Remove the insecure secret key that django has in the settings file by default and replace it with:
   - SECRET_KEY = os.environ.get('SECRET_KEY').
 - Replace the databases section with:
   - DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 - Ensure the correct indentation for python is used.
-- In the terminal migrate the models over to the new database connection using "python3 manage.py makemigrations" and "python3 manage.py migrate".
+- In the terminal migrate the models over to the new database connection using `python3 manage.py makemigrations` and `python3 manage.py migrate`.
 - Add the cloudinary libraries to the list of installed apps, the order they are inserted is important, 'cloudinary_storage' goes above 'django.contrib.staitcfiles' and 'cloudinary' goes below it.
 - In the Settings.py file - add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
 - Link the file to the templates directory in Heroku TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates').
@@ -625,7 +625,7 @@ The site was deployed to Heroku and the following steps were followed to do so:
 - Within the Procfile add the code:
   - web: guincorn PROJECT_NAME.wsgi
 - Set up your requiremtnts.txt file to save the libraries that will need to be installed by running the following command in the terminal:
-  - "pip freeze -> requiremnts.txt".
+  - `pip freeze -> requiremnts.txt`.
 - In the terminal, add the changed files, commit and push to GitHub.
 - In Heroku, navigate to the deployment tab and deploy the branch manually - watch the build logs for any errors.
 - Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the [live site](https://decant09-bokeh-photo-blog-0c5a394f8c26.herokuapp.com/).
@@ -648,8 +648,17 @@ The steps below describe how to fork or clone the repository if desired.
 6. Click on the HTTPS tab and copy the link shown.
 7. In your development environment open the terminal.
 8. Change the current working directory to the location where you want the cloned directory to be.
-9. Type "git clone" into the terminal, then paste the URL you copied in step 6.
+9. Type `git clone` into the terminal, then paste the URL you copied in step 6.
 10. Press **Enter** to create your local clone.
+11. In the terminal install the requirements by using the following: `pip3 install -r requirements.txt`.
+12. If you have your own packages that have been installed, then the requirements file needs updated using: `pip3 freeze --local > requirements.txt`.
+13. Next create the env.py file which tells our project which variables to use.
+14. Add the file to a .gitignore to prevent it from being pushed to github.
+15. Start the Django app: `python3 manage.py runserver`.
+16. Make migrations by running : `python3 manage.py makemigrations`
+17. Then migrate those changes with `python3 manage.py migrate`
+18. To run the project type python manage.py runserver into the terminal and open port 8000.
+19. This will open the project locally for you to work on.
 
 [Back to top](#contents)
 
