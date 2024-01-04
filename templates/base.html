@@ -40,7 +40,93 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://images.squarespace-cdn.com/content/v1/59cb891dbebafb736e8b81b3/3015914b-095f-4ca9-bff8-a45090247fa2/86B20F59-2B93-4B72-8926-C8263A8454A4+%281%29.jpg?format=1500w" width="150" height="150" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="{% url 'home' %}" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Meet Bailey<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Biography</a>
+                            <a class="dropdown-item" href="#">Reviews</a>
+                            <a class="dropdown-item" href="#">Blog</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            About Reiki
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">What is Reiki?</a>
+                            <a class="dropdown-item" href="#">Benefits</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Heal</a>
+                            <a class="dropdown-item" href="#">Holy fire</a>
+                            <a class="dropdown-item" href="#">Angelic</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Sessions
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Distance Reiki</a>
+                            <a class="dropdown-item" href="#">Animal Reiki</a>
+                            <a class="dropdown-item" href="#">Sound Healing</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Store
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Clothes</a>
+                            <a class="dropdown-item" href="#">Accessories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Register</a>
+                            <a class="dropdown-item" href="#">Login</a>
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     {% if messages %}
     <div class="message-container"></div>
@@ -53,6 +139,7 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     {% endblock %}
 
 
