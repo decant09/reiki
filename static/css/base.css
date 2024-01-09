@@ -1,4 +1,29 @@
 body {
+    background: url('https://images.squarespace-cdn.com/content/v1/59cb891dbebafb736e8b81b3/e5ecb40b-0c4b-4a2c-844c-31754b4c3444/Photo+on+20-09-2022+at+14.37.jpg?format=2500w') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
     font-family: 'Montserrat', sans-serif;
 }
 
+header {
+    padding: 0 !important;
+}
+
+.dropdown {
+    margin: auto 0;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-item {
+    padding: 4px 8px;;
+}
+
+@media screen and (max-width: 991px) {
+    .dropdown,
+    .dropdown-menu {
+        text-align: center;
+    }
+  }
