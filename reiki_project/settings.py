@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-$z_wki=44+59f#-3ac_iwb31e1753hnp$3@lxrf5p-)8+pz$1^
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-decant09-reiki-cwwka3f698.us2.codeanyapp.com'
+    '8000-decant09-reiki-cwwka3f698.us2.codeanyapp.com',
+    '8000-decant09-reiki-1cdjmb4titp.ws-us107.gitpod.io'
 ]
 
 
