@@ -1,7 +1,7 @@
 body {
-    background: url('https://images.squarespace-cdn.com/content/v1/59cb891dbebafb736e8b81b3/e5ecb40b-0c4b-4a2c-844c-31754b4c3444/Photo+on+20-09-2022+at+14.37.jpg?format=2500w') no-repeat center center fixed;
+    background: url('/media/web_image_42.png') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 212px);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,6 +20,16 @@ header {
 .dropdown-item {
     padding: 4px 8px;;
 }
+
+#delivery-banner {
+    background-color: #000;
+}
+
+.banner-font {
+    text-transform: uppercase;
+}
+
+/* buttons */
 
 .shop-now-button {
     background: black;
@@ -70,7 +80,7 @@ header {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 212px;
     }
 }
 
