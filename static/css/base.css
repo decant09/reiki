@@ -30,6 +30,14 @@ header {
     text-transform: uppercase;
 }
 
+/* hero */
+
+.hero-font {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
 /* buttons */
 
 .shop-now-button {
@@ -76,6 +84,10 @@ footer {
     text-align: end;
 }
 
+.footer-block {
+    width: 50%;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -85,9 +97,21 @@ footer {
   }
 }
 
+.fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.header-container {
+    padding-top: 212px;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    .fixed-top-desktop-only {
+    /* .fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
@@ -97,7 +121,7 @@ footer {
 
     .header-container {
         padding-top: 212px;
-    }
+    } */
 }
 
 @media screen and (max-width: 991px) {
@@ -105,4 +129,20 @@ footer {
     .dropdown-menu {
         text-align: center;
     }
+
+    .hero-font {
+        font-size: 2rem;
+    }
   }
+
+@media screen and (max-width: 425px) {
+    .footer-link-right {
+        padding-left: 0px;
+        /* padding-right: 0px; */
+    }
+
+    .footer-link-left {
+        /* padding-right: 0px; */
+        padding-right: 0px;
+    }
+}
