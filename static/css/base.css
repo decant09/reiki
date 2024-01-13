@@ -1,6 +1,7 @@
 body {
-    background: url('/media/web_image_42.png') no-repeat center center fixed;
+    background: url('/media/web_image_42.png') no-repeat fixed;
     background-size: cover;
+    background-position: center 100px;
     height: calc(100vh - 212px);
     font-family: 'Montserrat', sans-serif;
 }
