@@ -23,7 +23,7 @@ header {
 }
 
 #delivery-banner {
-    background-color: #000;
+    background-color: darkgrey;
 }
 
 .banner-font {
@@ -59,6 +59,21 @@ header {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+/* footer */
+
+footer {
+    padding: 25px 0;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer-link-right {
+    text-align: end;
 }
 
 /* -------------------------------- Media Queries */
