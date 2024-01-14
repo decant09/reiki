@@ -6,6 +6,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* navbar */
+
 header {
     padding: 0 !important;
 }
@@ -86,6 +88,18 @@ footer {
 
 .footer-block {
     width: 50%;
+}
+
+/* overlay */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
