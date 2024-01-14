@@ -76,33 +76,23 @@
                             <a class="dropdown-item" href="#">Benefits</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}?category=courses" role="button">
                             Courses
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Heal</a>
-                            <a class="dropdown-item" href="#">Holy fire</a>
-                            <a class="dropdown-item" href="#">Angelic</a>
-                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}?category=sessions" role="button">
                             Sessions
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Distance Reiki</a>
-                            <a class="dropdown-item" href="#">Animal Reiki</a>
-                            <a class="dropdown-item" href="#">Sound Healing</a>
-                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                             Store
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Clothes</a>
-                            <a class="dropdown-item" href="#">Accessories</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=clothes">Clothes</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=accessories">Accessories</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
