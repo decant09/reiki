@@ -572,7 +572,7 @@ All images to support the testing have been documented previously in the Feature
 #### Known
 - bug
 #### Solved
-- bug
+- After applying the logic to filter products by category I was not able to view the page upon clicking on the navbar link. Clicking on the link did not yield any action. The expected action was that the product page would display with the filter applied for the specific category. I realized that there were data-toggle="dropdown" and aria-expanded="False" attributes in the anchor element. The navbar items had previously been dropdowns with these attributes but I had amended them to simple links without removing them. Removing the attributes resolved the issue.
 
 [Back to top](#contents)
 
