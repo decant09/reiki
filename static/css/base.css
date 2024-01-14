@@ -12,7 +12,7 @@ header {
     padding: 0 !important;
 }
 
-.dropdown {
+.nav-item {
     margin: auto 0;
 }
 
@@ -139,7 +139,7 @@ footer {
 }
 
 @media screen and (max-width: 991px) {
-    .dropdown,
+    .nav-item,
     .dropdown-menu {
         text-align: center;
     }
