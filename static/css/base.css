@@ -8,6 +8,18 @@ body {
 
 /* navbar */
 
+.fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.header-container {
+    padding-top: 212px;
+}
+
 header {
     padding: 0 !important;
 }
@@ -51,6 +63,12 @@ header {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
 }
 
 .shop-now-button:hover,
@@ -109,18 +127,6 @@ footer {
   .container {
     max-width: 80%;
   }
-}
-
-.fixed-top-desktop-only {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-
-.header-container {
-    padding-top: 212px;
 }
 
 /* fixed top navbar only on medium and up */
