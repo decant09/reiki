@@ -7,6 +7,7 @@ def cart_contents(request):
 
     cart_items = []
     total = 0
+    total_if_delivery_charge = 0
     product_count = 0
     cart = request.session.get('cart', {})
 
@@ -20,6 +21,8 @@ def cart_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
+            if product.delivery_charge is True:
+                total_if_delivery_charge += (product.price * item_data)
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
@@ -31,9 +34,11 @@ def cart_contents(request):
                     'product': product,
                     'size': size,
                 })      
+                if product.delivery_charge is True:
+                    total_if_delivery_charge += (product.price * quantity)
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(
+        delivery = total_if_delivery_charge * Decimal(
             settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
 
