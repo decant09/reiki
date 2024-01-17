@@ -89,6 +89,11 @@ header {
     border: 1px solid black !important;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* footer */
 
 footer {
