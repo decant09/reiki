@@ -209,8 +209,8 @@ Pre-project planning involved generating an entity relationship diagram. This wa
 <summary>Entity Relationship Diagram</summary>
 <img src="media/readme/database/lucid_erd_diagram.png">
 </details>  
-<details>
-The database models for this project are shown in the schema below and were created using [Graphviz](https://dreampuf.github.io/GraphvizOnline/). I have included flowchart diagrams to show how the different models relate to each other. The master flowchart shows all of the extended models in the project, some of which were not used but came with the Django Aallauth import, for example the social models. I have included a more refined flowchart showing the models I created and how they relate to each other. I have also included the model structure in tabular form.
+
+<!-- The database models for this project are shown in the schema below and were created using [Graphviz](https://dreampuf.github.io/GraphvizOnline/). I have included flowchart diagrams to show how the different models relate to each other. The master flowchart shows all of the extended models in the project, some of which were not used but came with the Django Aallauth import, for example the social models. I have included a more refined flowchart showing the models I created and how they relate to each other. I have also included the model structure in tabular form. -->
 <details>
 <summary>Master Flowchart</summary>
 <img src="media/readme/database/image.png">
@@ -667,7 +667,7 @@ The steps below describe how to fork or clone the repository if desired.
 ### Code Used
 - code
 ### Resources
-- resource
+- Django import statements were too long for PEP8 so used parentheses as per [stackoverflow](https://stackoverflow.com/questions/17273847/long-imports-in-python).
 
 ### Acknowledgements
 - My Mentor Chris Quinn for continuous helpful feedback.
