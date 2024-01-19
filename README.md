@@ -666,7 +666,7 @@ The steps below describe how to fork or clone the repository if desired.
 
 ## Credits
 ### Code Used
-- code
+- To properly caluclate delivery charges in the Order model for the update_total function I used the code from Emma Hewson's Island Bees project on (GitHub)[https://github.com/emmahewson/island-bees/blob/main/checkout/models.py]. 
 ### Resources
 - Django import statements were too long for PEP8 so used parentheses as per [stackoverflow](https://stackoverflow.com/questions/17273847/long-imports-in-python).
 
