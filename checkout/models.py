@@ -39,18 +39,41 @@ class Order(models.Model):
     def update_total(self):
         """
         Update grand total each time a line item is added,
-        accounting for delivery costs.
+        accounting for delivery costs on items which
+        charge for delivery.
+        Code from github.com/emmahewson/island-bees/
         """
-        self.order_total = self.lineitems.aggregate(
-            Sum('lineitem_total'))['lineitem_total__sum'] or 0
+
+        # Calculates the order total without delivery
+        self.order_total = float(self.lineitems.aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum']) or float(0)
+
+        # Calculate delivery if product.delivery_charge is True
+        total_delivery_charge = self.lineitems.filter(
+            product__delivery_charge=True).aggregate(
+                Sum('lineitem_total'))['lineitem_total__sum']
+
+        # Converts total_delivery_charge to float & checks has a value > 0
+        if total_delivery_charge is not None:
+            if total_delivery_charge > 0:
+                total_delivery_chargeable = float(total_delivery_charge)
+            else:
+                total_delivery_chargeable = float(0)
+        # If total_delivery_charge has no value sets it to a float of 0
+        else:
+            total_delivery_chargeable = float(0)
+
+        # Checks if total qualifies for free delivery
+        # & calculates delivery charge
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = (
-                self.order_total * (
+                total_delivery_chargeable * (
                     settings.STANDARD_DELIVERY_PERCENTAGE
-                    ) / 100
-                    )
+                ) / 100)
         else:
-            self.delivery_cost = 0
+            self.delivery_cost = 0.00
+
+        # Calculates total including delivery
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
