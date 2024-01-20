@@ -27,7 +27,6 @@ SECRET_KEY = 'django-insecure-$z_wki=44+59f#-3ac_iwb31e1753hnp$3@lxrf5p-)8+pz$1^
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-decant09-reiki-cwwka3f698.us2.codeanyapp.com',
     # '8000-decant09-reiki-1cdjmb4titp.ws-us107.gitpod.io',
     '8000-decant09-reiki-rgrw0003uml.ws-eu107.gitpod.io'
 ]
@@ -186,3 +185,5 @@ STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+
+DEFAULT_FROM_EMAIL = 'info@baileybarbourreiki.com'
