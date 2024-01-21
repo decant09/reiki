@@ -70,4 +70,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Reviews -->
+    <div class="container-fluid bg-white text-center px-3 px-md-4 py-4 py-md-5">
+        <div class="row mx-5">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <h3 class="text-uppercase">Reviews</h3>
+            </div>
+            <hr class="w-75">
+            {% for review in homepage_reviews %}
+            <div class="col-12 col-lg-4 px-4 py-2">
+                <div class="mx-2">
+                    <div>
+                        <p>{{ review.content }}</p>
+                    </div>
+                    <div class="font-italic">
+                        <p>{{ review.user }}</p>
+                    </div>
+                </div>  
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
