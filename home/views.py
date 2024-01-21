@@ -12,3 +12,9 @@ def index(request):
     }
 
     return render(request, 'home/index.html', context)
+
+
+def biography(request):
+    """ A view to return the biography page """
+
+    return render(request, 'home/biography.html')
