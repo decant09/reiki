@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="banner-font">FAQ</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-5 accordion" id="faq-accordion">
+                {% for faq in faqs %}
+                    <div class="card w-100 border-0 rounded-0 pb-3 mb-3">
+                        <!-- FAQ Question -->
+                        <div class="card-header bg-white border-0 p-0 d-flex justify-content-between mx-auto" id="header-{{ faq.id }}">
+                            <p>
+                                <button class="border-0 bg-white d-inline p-0 text-center text-uppercase" type="button" data-toggle="collapse" data-target="#collapse-{{faq.id}}" aria-expanded="false" aria-controls="collapse-{{faq.id}}">
+                                    {{faq.question}}
+                                </button>
+                            </p>
+                        </div>
+                        <hr class="w-100">
+                        <!-- FAQ Answer Collapsible -->
+                        <div id="collapse-{{faq.id}}" class="collapse mx-auto" aria-labelledby="header-{{ faq.id }}" data-parent="#faq-accordion">
+                            <div class="card-body px-0 pt-3 pb-0">
+                                <p class="text-center">{{faq.answer}}</p>
+                                <hr class="w-100">                    
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
