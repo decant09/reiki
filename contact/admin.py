@@ -4,7 +4,7 @@ from .models import Contact
 
 class ContactAdmin(admin.ModelAdmin):
     readonly_fields = ('created_on',)
-    list_display = ('name', 'subject', 'created_on', 'responded',)
+    list_display = ('name', 'email', 'subject', 'created_on', 'responded',)
     list_editable = ('responded',)
     order = ('-created_on')
 
