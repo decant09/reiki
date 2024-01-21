@@ -19,11 +19,20 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-5">
-                <!-- {% for faq in faqs %} -->
-                    
-                <!-- {% endfor %} -->
+            <!-- <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-5"> -->
+                
+            <!-- Contact Us Form -->
+            <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-1 mt-2 mx-auto">
+                <p class="mb-3">Send us a message using the form below.</p>
+                <form action="{% url 'contact' %}" method="POST" id="contact-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="text-end">
+                        <button class="btn btn-black rounded-0 text-uppercase float-right">Send Message</button>
+                    </div>
+                </form>
             </div>
+            <!-- </div> -->
         </div>
     </div>
 {% endblock %}
