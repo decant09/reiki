@@ -46,10 +46,13 @@ header {
 
 /* hero */
 
-.hero-font {
-    background-color: rgba(255, 255, 255, 0.5);
+.hero-bg {
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 0.25rem;
-    border-radius: 0.25rem;
+}
+
+.hero-p {
+    font-size: 1.25rem;
 }
 
 /* buttons */
@@ -92,6 +95,10 @@ header {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+.shop-btn {
+    min-width: 125px;
 }
 
 /* footer */
@@ -247,14 +254,40 @@ footer {
         text-align: center;
     }
 
-    .hero-font {
+    .hero-header {
         font-size: 2rem;
+    }
+
+    .hero-p {
+        font-size: 1rem;
+    }
+
+    .shop-now-button {
+        min-width: fit-content;
+        padding-top: 0.25rem !important;
+        padding-right: 1rem !important;
+        padding-bottom: 0.25rem !important;
+        padding-left: 1rem !important;
     }
   }
 
-/* footer media queries */
+/* media queries < 425px */
 
 @media screen and (max-width: 425px) {
+    .hero-bg {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .shop-btn {
+        margin-top: 0.5rem;
+        padding-top: 0.25rem !important;
+        padding-right: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+        padding-left: 0.25rem !important;
+        min-width: 125px;
+    }
+
     .footer-link-right {
         padding-left: 0px;
     }

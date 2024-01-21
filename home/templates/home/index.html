@@ -12,15 +12,61 @@
 {% block content %}
     <div class="container h-100">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 hero-font text-black">
-                    Welcome, I'm so glad you found me!
-                </h1>
-                <div class="my-5">
+            <div class="col-11 col-md-6 my-auto hero-bg px-3 px-md-4 py-3 py-md-4">
+                <div>
+                    <h1 class="hero-header display-4 text-black">
+                        Welcome to Bailey Barbour Reiki!
+                    </h1>
+                </div>
+                <div class="my-2 hero-p">
+                    <p>I teach and practice Reiki and Sound Healing</p>
+                    <p>Feel free to explore my website or book a discovery call by clicking on the link below to find out more</p>
+                </div>
+                <div class="mt-5 mb-2">
                     <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-1 text-uppercase py-3">Discovery Call</a>
+                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Discovery Call</a>
                     </h4>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products & Services Intro Info -->
+    <div class="container-fluid bg-white text-center px-3 px-md-4 py-4 py-md-5">
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <h3 class="text-uppercase">Products & Services</h3>
+            </div>
+            <hr class="w-75">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-2">
+                <p>I offer Distance Reiki & Sound Healing Sessions to help calm your nervous system and promote healing in your body.
+                    I also offer courses to teach you Reiki so you can bring the amazing benefits of Reiki into your everyday life.</p>
+                <p>You will also find products in my online store that will help you make positive changes in your mindset & life!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop By Category div w/ category buttons -->
+    <div class="container-fluid text-center px-3 px-md-4 py-4 py-md-5 hero-bg">
+        <div class="row text-center">
+
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mb-3">
+                <h3 class="text-uppercase">Discover my products</h3>
+            </div>
+            <!-- Shop Buttons -->
+            <div class="col-3 col-md-12 d-flex flex-wrap justify-content-center mx-auto">
+                <a href="{% url 'products' %}?category=courses"
+                    class="shop-btn btn btn-lg btn-black rounded-0 text-uppercase py-3 mx-auto">
+                    <span class="text-uppercase">Courses</span>
+                </a>
+                <a href="{% url 'products' %}?category=sessions"
+                    class="shop-btn btn btn-black btn-lg rounded-0 text-uppercase py-3 mx-auto">
+                    <span class="text-uppercase">Sessions</span>
+                </a>
+                <a href="{% url 'products' %}?category=clothes,accessories"
+                    class="shop-btn btn btn-black btn-lg rounded-0 text-uppercase py-3 mx-auto">
+                    <span class="text-uppercase">Store</span>
+                </a>
             </div>
         </div>
     </div>
