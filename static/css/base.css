@@ -269,6 +269,15 @@ footer {
         padding-bottom: 0.25rem !important;
         padding-left: 1rem !important;
     }
+
+    .shop-btn {
+        margin-top: 0.5rem;
+        padding-top: 0.25rem !important;
+        padding-right: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+        padding-left: 0.25rem !important;
+        min-width: 125px;
+    }
   }
 
 /* media queries < 425px */
@@ -281,15 +290,6 @@ footer {
     .hero-bg {
         margin-left: auto;
         margin-right: auto;
-    }
-    
-    .shop-btn {
-        margin-top: 0.5rem;
-        padding-top: 0.25rem !important;
-        padding-right: 0.25rem !important;
-        padding-bottom: 0.25rem !important;
-        padding-left: 0.25rem !important;
-        min-width: 125px;
     }
 
     .footer-link-right {
