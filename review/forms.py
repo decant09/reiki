@@ -6,7 +6,7 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ('content')
+        fields = ('content',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -14,8 +14,6 @@ class ReviewForm(forms.ModelForm):
         placeholders = {
             'content': 'Please leave review here...',
         }
-
-        self.fields['content'].widget.attrs['autofocus'] = True
 
         for field in self.fields:
             if self.fields[field].required:
