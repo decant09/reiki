@@ -30,3 +30,9 @@ def what_is_reiki(request):
     """ A view to return the what_is_reiki page """
 
     return render(request, 'home/what_is_reiki.html')
+
+
+def benefits_of_reiki(request):
+    """ A view to return the benefits_of_reiki page """
+
+    return render(request, 'home/benefits_of_reiki.html')
