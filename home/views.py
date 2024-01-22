@@ -18,3 +18,9 @@ def biography(request):
     """ A view to return the biography page """
 
     return render(request, 'home/biography.html')
+
+
+def privacy_policy(request):
+    """ A view to return the privacy_policy page """
+
+    return render(request, 'home/privacy_policy.html')
