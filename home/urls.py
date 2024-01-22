@@ -11,4 +11,8 @@ urlpatterns = [
         'benefits_of_reiki',
         views.benefits_of_reiki,
         name='benefits_of_reiki'),
+    path(
+        'terms_conditions',
+        views.terms_conditions,
+        name='terms_conditions'),
 ]
