@@ -24,3 +24,9 @@ def privacy_policy(request):
     """ A view to return the privacy_policy page """
 
     return render(request, 'home/privacy_policy.html')
+
+
+def what_is_reiki(request):
+    """ A view to return the what_is_reiki page """
+
+    return render(request, 'home/what_is_reiki.html')
