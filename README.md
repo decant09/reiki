@@ -591,9 +591,17 @@ An embedded mailchimp newsletter form is included in the footer of the website a
 
 ### Accessibility
 #### WebAIM
-I tested for contrast with no errors showing. I tested a selection of pages as most pages use the same colour scheme and webaim was not able to access all pages because of login requirements.
+I tested for contrast using the [WAVE web evaluation teting tool](https://wave.webaim.org/). I tested a selection of pages as most pages use the same colour scheme and webaim was not able to access all pages because of login requirements. Between three and five errors were highlighted for these pages for minor areas, two of those relating to the Mailchimp embed, one relating to the free delivery banner, and two further relating to the blue links to login or register.
 <details>
-<summary>Page</summary>
+<summary>Homepage</summary>
+<img src="media/readme/testing/webaim/webaim_home.png">
+</details>
+<details>
+<summary>Products</summary>
+<img src="static/images/readme/testing/webaim/landing.png">
+</details>
+<details>
+<summary>Reviews</summary>
 <img src="static/images/readme/testing/webaim/landing.png">
 </details>
 
@@ -658,7 +666,9 @@ Google Lighthouse was used to test for accessibility for each page.
 | Users can access the contact form from footer | Pass |
 | Footer links act as intended | Pass |
 | Footer social media links open in a new tab | Pass |
+| Clicking FAQ revelas answer in dropdown | Pass |
 | SuperUser can access admin panel to manage website | Pass |
+| Navigation bar compresses to 3 button accordion on medium & small screens | Pass |
 | 500 homepage button take users to homepage | Pass |
 | 404 homepage button take users to homepage | Pass |
 
