@@ -13,9 +13,6 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
   - [User Experience](#user-experience)
     - [Initial Discussion](#initial-discussion)
     - [User Stories](#user-stories)
-      - [First Time Visitor Goals](#first-time-visitor-goals)
-      - [Returning Visitor Goals](#returning-visitor-goals)
-      - [Frequent Visitor Goals](#frequent-visitor-goals)
     - [Design](#design)
       - [Colour Scheme](#colour-scheme)
       - [Typography](#typography)
@@ -87,21 +84,10 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
 ## User Experience
 
 ### Initial Discussion
- 
+This website was created for a project submission to Code Institute for the Diploma in Full Stack Software Development (E-commerce Applications). The criteria for the submission were primarily that it be an E-commerce platform created using the Bootstrap and Django frameworks and utilises the Stripe payment infrastructure to allow users to buy products. I chose Bailey Barbour Reiki & Sound Healing as the business to develop this website for as the business owner had approached me to develop a new website for her.
 
 ### User Stories
-#### First Time Visitor Goals
-- first time visitor goal 1
-- first time visitor goal 2
-- first time visitor goal 3
-#### Returning Visitor Goals
-- returnin visitor goal 1
-- returnin visitor goal 2
-- returnin visitor goal 3
-#### Frequent Visitor Goals
-- frequent visitor goal 1
-- frequent visitor goal 2
-- frequent visitor goal 3
+The projects user stories have been documented on the [GitHub project board](https://github.com/users/decant09/projects/8).
 
 [Back to top](#contents)
 
@@ -230,8 +216,6 @@ The blog wireframes were created although in the end this feature does not exist
 <summary>Blog Detail Page</summary>
 <img src="media/readme/wireframes/blog_detail.png">
 </details>
-
-
 
 #### Database Schema
 Pre-project planning involved generating an entity relationship diagram. This was done in order to create a clear plan as to how all of the database models interact with each other. This was also done to determine what data fields were needed for each model.
