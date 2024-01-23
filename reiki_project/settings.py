@@ -31,7 +31,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    # '8000-decant09-reiki-1cdjmb4titp.ws-us107.gitpod.io',
     '8000-decant09-reiki-rgrw0003uml.ws-eu107.gitpod.io',
     'decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com',
 ]
