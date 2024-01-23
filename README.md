@@ -107,9 +107,9 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
 
 ### Design
 #### Colour Scheme
-about colour scheme
+I opted for a neutral colour scheme throughout the website mainly using greys, whites, and blacks. I opted for this approach to create a calm atmosphere for visitors to the website due to the nature of the business. The default toast message colours were used when displaying messages to the user.
 #### Typography
-about typography
+The Montserrat sans-serif font style was chosen for its clean geometric lines and modern aesthetic.
 #### Agile Development
 An agile development approach was taken to create this project. A project board was created using GitHub Projects. User stories were assigned to epics. MoSCow prioritization was used to prioritize epics and user stories by assigning custom labels that denote a level of importance. Custom milestones were also created to help keep the project on track. Epics and user stories were assigned to the different areas of the kanban depending on their status. The areas were:
 - To Do
