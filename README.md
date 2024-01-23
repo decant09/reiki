@@ -20,18 +20,6 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
       - [Wireframes](#wireframes)
       - [Database Schema](#database-schema)
   - [Features](#features)
-    - [Page](#page)
-    - [Page](#page-1)
-    - [Page](#page-2)
-    - [Page](#page-3)
-    - [Page](#page-4)
-    - [Page](#page-5)
-    - [Page](#page-6)
-    - [Page](#page-7)
-    - [Page](#page-8)
-    - [Page](#page-9)
-    - [Login Page](#login-page)
-    - [Logout Page](#logout-page)
     - [Future Features](#future-features)
   - [Search Engine Optimization and Social Media Marketing](#search-engine-optimization-and-social-media-marketing)
     - [Keywords](#keywords)
@@ -227,107 +215,219 @@ Pre-project planning involved generating an entity relationship diagram. This wa
 [Back to top](#contents)
 
 ## Features
-The website is composed primarily of four...  
-### Page  
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/landing_page.png">
-    </details>
-    
-### Page
+The main features of the website are documented in this section.
 
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/post_list_page.jpeg">
-    </details>
-### Page
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/user_post_list_page.png">
-    </details>
-### Page
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/post_detail_page_no_auth.jpeg">
-    </details>
-
-### Page
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/profile_page.jpeg">
-    </details>
-### Page
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/create_post_page.png">
-    </details>
-
-### Page
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/post_update_page.png">
-    </details>
-    <details>
-### Page
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/post_delete_page.png">
-    </details>
-
-### Page
-- description
-    <details>
-    <summary>page</summary>
-    <img src="static/images/readme/screenshots/post_comment.png">
-    </details>
-
-### Page
-- description
-    <details>
-    <summary>Page</summary>
-    <img src="static/images/readme/screenshots/signup_page.png">
-    </details>
-
-### Login Page
-- The login page is available in the navigation bar to users who are not already logged in under "Login".
-- The user is taken to the login page where they enter their username and password.
-- Errors are displayed if the details are not correct.
-- Once completed correctly and the "Sign In" button clicked the user is taken to the post list page with a disappearing message displayed confirming their login.
-    <details>
-        <summary>Signin Page</summary>
-        <img src="static/images/readme/screenshots/signin_page.png">
-    </details>
-    <details>
-        <summary>Signin Error Prompts</summary>
-        <img src="static/images/readme/screenshots/signin_error_prompts.png">
-    </details>
-    <details>
-        <summary>Login Success Message</summary>
-        <img src="static/images/readme/screenshots/login_success_message.png">
-    </details>
-### Logout Page
-- The logout page is accessed by logged in users clicking the "Logout" link in the navigation bar.
-- The user is taken to the logout page where they are asked to confirm their logout by clicking "Sign Out".
-- If they do not wish to logout they can click on any of the links in the navigation bar.
-- If they confirm logout the user is taken to the landing page and a disappearing logout success message is displayed.
-    <details>
-        <summary>Logout Page</summary>
-        <img src="static/images/readme/screenshots/signout_page.png">
-    </details>
-    <details>
-        <summary>Logout Success Message</summary>
-        <img src="static/images/readme/screenshots/logout_success_message.png">
-    </details>
+- Navigation
+    - The Desktop navigation is available throughout the website. It contains all of the relevant links to allow the user to navigate around the site. Certain links are available to users depending on logged in status or admin status. The logo is a link to the homepage. There is also a cart icon that displays a running total of itmes in the cart. This can be clicked on to take the user to the checkout details page.
+        <details>
+        <summary>Navbar Admin</summary>
+        <img src="media/readme/web_images/navbar_admin.png">
+        </details>
+        <details>
+        <summary>Navbar New User</summary>
+        <img src="media/readme/web_images/navbar_new_user.png">
+        </details>
+        <details>
+        <summary>Navbar Logged in</summary>
+        <img src="media/readme/web_images/navbar_bar_logged_in.png">
+        </details>
+    - On mobile the navigation collapses using bootstraps accordion facility.
+        <details>
+        <summary>Navbar Logged in</summary>
+        <img src="media/readme/web_images/navbar_accordion.png">
+        </details>
+    - Any extra links to pages on the website are located in the footer as well as social media links and a mailchimp newsletter signup facility.
+        <details>
+        <summary>Footer</summary>
+        <img src="media/readme/web_images/footer.png">
+        </details>
+- Authentication
+    - The authentication system used is Django Allauth and links to the main login, logout & register pages are found in the account section of the navbar. Appropriate messages are displayed to the user if form fields are not completed correctly and toast messages are displayed in conjuction for success or errors.
+        <details>
+            <summary>Login Page</summary>
+            <img src="media/readme/web_images/login.png">
+        </details>
+        <details>
+            <summary>Login Success</summary>
+            <img src="media/readme/web_images/login_success.png">
+        </details>
+        <details>
+            <summary>Register Page</summary>
+            <img src="media/readme/web_images/register.png">
+        </details>
+        <details>
+            <summary>Logout Success</summary>
+            <img src="media/readme/web_images/logout_success.png">
+        </details>
+- Products
+    - Products are displayed pages based on the categories of Courses, Sessions, Clothes and accessories. Each product can be clicked on to take the user to the product detail page where the user can add product quantities to the cart.
+        <details>
+            <summary>Products</summary>
+            <img src="media/readme/web_images/products.png">
+        </details>
+        <details>
+            <summary>Product Details</summary>
+            <img src="media/readme/web_images/product_details.png">
+        </details>
+    - Products can be navigated to using the navbar as shown in a previous image or by using the buttons in the Discover my Products section of the homepage.
+        <details>
+            <summary>Discover Products</summary>
+            <img src="media/readme/web_images/products_discover.png">
+        </details>
+- Cart
+    - The cart contains a list of products that the user has added to their cart and they can also edit quantities or remove items if desired. Messages are displayed to the user in a modal on adding, removing or editing the contents of the cart. The cart also contains a summary of charges charges the user can expect to pay upon checking out.
+        <details>
+            <summary>Cart Success</summary>
+            <img src="media/readme/web_images/cart_success.png">
+        </details>
+        <details>
+            <summary>Cart Details</summary>
+            <img src="media/readme/web_images/cart_details.png">
+        </details>
+        <details>
+            <summary>Cart Charges</summary>
+            <img src="media/readme/web_images/cart_charges.png">
+        </details>
+- Checkout
+    - The checkout page contains the details of the cart and a form to enter information required for the checkout. There is a stripe form located at the bottom for the user to enter card details. The user can also opt to save their details for futures so that the form will be prepopulated for them on their next visit.
+        <details>
+            <summary>Checkout Details</summary>
+            <img src="media/readme/web_images/checkout_details.png">
+        </details>
+        <details>
+            <summary>Delivery Form</summary>
+            <img src="media/readme/web_images/delivery_form.png">
+        </details>
+        <details>
+            <summary>Stripe Form</summary>
+            <img src="media/readme/web_images/stripe_form.png">
+        </details>
+    - Once a payment is processed the user is taken to a checkout success page. A success message appears in the modal and the order details are diplayed. A confirmation email is also sent to the user.
+        <details>
+            <summary>Checkout Success</summary>
+            <img src="media/readme/web_images/checkout_success.png">
+        </details>
+        <details>
+            <summary>Confirmation Email</summary>
+            <img src="media/readme/web_images/confirmation_email.png">
+        </details>
+- Profile
+    - The profile page contains the users stored delivery information and a history of previous orders. The user can update their information and view order details by clicking on the order number which displays the order details that was presented to them on the checkout success above. When viewing the order details a message is displayed clarifying that this is a previous order and that an email was sent at the time of purchase.
+        <details>
+            <summary>Profile</summary>
+            <img src="media/readme/web_images/profile.png">
+        </details>
+        <details>
+            <summary>Order Details</summary>
+            <img src="media/readme/web_images/order_details.png">
+        </details>
+- Contact
+    - The contact form can be accessed by clicking on the discovery call button on the homepage or by clicking the contact link in the footer shown in above footer image. It allows the user to send a message to the website regarding a discovey call or other issues. The message can then be accessed by the admin in the admin panel. A success message lets the user know the form was sent successfully and the form is refreshed with empty fields with the email prepopulated if the user is signed in.
+        <details>
+            <summary>Discovery Call</summary>
+            <img src="media/readme/web_images/discovery_call.png">
+        </details>
+        <details>
+            <summary>Contact Form</summary>
+            <img src="media/readme/web_images/contact_form.png">
+        </details>
+        <details>
+            <summary>Contact Form Success</summary>
+            <img src="media/readme/web_images/contact_success.png">
+        </details>
+    - In the admin panel the admin can view the message and mark it as responded to.
+        <details>
+            <summary>Contact Admin</summary>
+            <img src="media/readme/web_images/contact_admin.jpeg">
+        </details>
+- Reviews
+    - Reviews of the business are located on the reviews page in the Meet Bailey dropdown in the navbar. There are also three reviews with homepage boolean field set to true that appear on the homepage. Users, if logged in, can leave a review and a message is displayed informing them that they have successfully left a review and that it will appear once the admin approves it. The review post form is located at the bottom of the reviews page and is only visible to logged in users. Reviews can be managed by the admin in the admin panel where they can approve reviews and change homepage status.
+        <details>
+            <summary>Reviews</summary>
+            <img src="media/readme/web_images/reviews.png">
+        </details>
+        <details>
+            <summary>Review Form</summary>
+            <img src="media/readme/web_images/review_form.png">
+        </details>
+        <details>
+            <summary>Homepage Reviews</summary>
+            <img src="media/readme/web_images/reviews_homepage.png">
+        </details>
+        <details>
+            <summary>Review Success</summary>
+            <img src="media/readme/web_images/review_success.png">
+        </details>
+        <details>
+            <summary>Review Admin</summary>
+            <img src="media/readme/web_images/review_admin.jpeg">
+        </details>
+- FAQ
+    - A frequently asked questions page can be accessed from the FAQ footer link. Clicking on a question reveal the answer in a dropdown panel. FAQs can be managed in the admin panel.
+        <details>
+            <summary>FAQ</summary>
+            <img src="media/readme/web_images/faq.png">
+        </details>
+- Manage Products
+    - Products can be managed by the admin superuser. This can be access from the navbar Manage Products link as shown above. Here the admin can add products using the form.
+        <details>
+            <summary>Add Product</summary>
+            <img src="media/readme/web_images/product_add1.png">
+        </details>
+        <details>
+            <summary>Add Product</summary>
+            <img src="media/readme/web_images/product_add2.png">
+        </details>
+    - Products can be edited and delted by using the buttons available only to the superuser on the products and product details page. Clicking the edit button displays a form prepopulated with all of the product details.
+        <details>
+            <summary>Edit or Delete Product</summary>
+            <img src="media/readme/web_images/product_ed_del_btn.png">
+        </details>
+        <details>
+            <summary>Update Product</summary>
+            <img src="media/readme/web_images/product_update1.png">
+        </details>
+        <details>
+            <summary>Update Product</summary>
+            <img src="media/readme/web_images/product_update2.png">
+        </details>
+    - Once a product is added or updated using the forms and submitted the page redirects to that product's details page with a success message displayed. 
+        <details>
+            <summary>Product Success</summary>
+            <img src="media/readme/web_images/product_success.png">
+        </details>
+- Additional Information Pages
+    - Pages that contain information for the user are also available on the website.
+        <details>
+            <summary>Biography</summary>
+            <img src="media/readme/web_images/biography.png">
+        </details>
+        <details>
+            <summary>What is Reiki</summary>
+            <img src="media/readme/web_images/what_is_reiki.png">
+        </details>
+        <details>
+            <summary>Benefits</summary>
+            <img src="media/readme/web_images/benefits.png">
+        </details>
+        <details>
+            <summary>Privacy Policy</summary>
+            <img src="media/readme/web_images/privacy.png">
+        </details>
+        <details>
+            <summary>Terms & Conditions</summary>
+            <img src="media/readme/web_images/tsandcs.png">
+        </details>
+- Error Pages
+    - Custom 404 and 500 error pages are also a feature. They contain a button to take the user back to the homepage. An example of the 404 page is shown here but the 500 page layout is similar.
+        <details>
+            <summary>404</summary>
+            <img src="media/readme/web_images/404.png">
+        </details>
+- Restrictions
+    - Users are redirected from pages they do not have authorization to view. If a user was to manually type the URL for the add products page for example they would be redireted back to the login page.
 ### Future Features
-- future features
+- Although the admin can see messages from the contact form in the admin site it would be better if this was implemented on the frontend with the ability to manage and reply to messages directly there. Therefore this is a feature I would like to implement in the future to improve the utility of the site for the business owner.
 [Back to top](#contents)
 
 ## Search Engine Optimization and Social Media Marketing
