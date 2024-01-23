@@ -53,10 +53,6 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
       - [Comment Tests](#comment-tests)
       - [Profile Tests](#profile-tests)
       - [Admin Tests](#admin-tests)
-    - [Testing User Stories from User Experience (UX)](#testing-user-stories-from-user-experience-ux)
-      - [First Time Visitor Goals](#first-time-visitor-goals-1)
-      - [Returning Visitor Goals](#returning-visitor-goals-1)
-      - [Frequent Visitor Goals](#frequent-visitor-goals-1)
     - [Bugs](#bugs)
       - [Known](#known)
       - [Solved](#solved)
@@ -488,6 +484,8 @@ A screenshot of the facebook business page can be seen below.
 ### Newsletter Marketing
 An embedded mailchimp newsletter form is included in the footer of the website and available throughout the whole site. Users can subscribe to the newletter to hear of any updates or offers. In this way the business can grow an audience and send marketing material their way to improve sales. 
 
+[Back to top](#contents)
+
 ##  Technologies Used
 ### Languages
 - HTML5
@@ -511,9 +509,14 @@ An embedded mailchimp newsletter form is included in the footer of the website a
     - Python WSGI HTTP Server.
 - [Psycopg2](https://pypi.org/project/psycopg2/)
     - Python-PostgreSQL Database Adapter.
-- [Cloudinary](https://cloudinary.com/)
+- [Amazon Web Services](https://aws.amazon.com/)
     - Cloud based image management system used for managing the images.
+- [Stripe](https://stripe.com/ie)
+    - Used for online secure payments.
+
 ### Programs
+- [Gitpod](https://www.gitpod.io/)
+    - Used as a cloud-based IDE for development.
 - [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
     - Templating engine to allow writing code similar to Python syntax.
 - [Heroku](https://www.heroku.com/)
@@ -536,10 +539,12 @@ An embedded mailchimp newsletter form is included in the footer of the website a
     - Used to generate an image to show responsiveness across different device sizes.
 - [Pip](https://pypi.org/project/pip/)
     - For installing python packages.
-- [Graphiz](https://dreampuf.github.io/GraphvizOnline/)
-  - Used to generate the database entity relationship diagram.
 - [XML-Sitemaps](https://www.xml-sitemaps.com)
-    - Used to generate the sitemap.xml file.  
+    - Used to generate the sitemap.xml file.
+- [jpg2png](https://jpg2png.com/)
+    - To covert large jpg files to png
+- [Compressjpg](https://compressjpeg.com/)
+    - To reduce large jpg files
 
 [Back to top](#contents)
 
@@ -709,20 +714,6 @@ Google Lighthouse was used to test for accessibility for each page.
 | Admin can delete profiles | Pass |
 | Admin can delete users | Pass |
 | Deleting a user deletes all of their posts and comments also | Pass |
-
-[Back to top](#contents)
-
-### Testing User Stories from User Experience (UX) 
-All images to support the testing have been documented previously in the Features section above. To avoid repitition of material I have not included theses images in this section. Please refer to the [Features](#features) section for the supporting images for the content addressed below.
-#### First Time Visitor Goals
-- first time visitor goal
-- first time visitor goal
-#### Returning Visitor Goals
-- returning visitor goal
-- returning visitor goal
-#### Frequent Visitor Goals
-- frequent visitor goal
-- frequent visitor goal
 
 [Back to top](#contents)
 
