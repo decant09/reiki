@@ -49,8 +49,8 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
       - [User Navigation Tests](#user-navigation-tests)
       - [Links and Buttons Tests](#links-and-buttons-tests)
       - [Account Security Tests](#account-security-tests)
-      - [Post Tests](#post-tests)
-      - [Comment Tests](#comment-tests)
+      - [Payments Tests](#payments-tests)
+      - [Toast Messages Tests](#toast-messages-tests)
       - [Profile Tests](#profile-tests)
       - [Admin Tests](#admin-tests)
     - [Bugs](#bugs)
@@ -620,8 +620,11 @@ Google Lighthouse was used to test for accessibility for each page.
 | Test |Result  |
 |--|--|
 | User can create account | Pass |
+| User has to verify email on registration | Pass |
 | User can log into account| Pass |
+| User is notified of logging in to account| Pass |
 | User can log out of account| Pass |
+| User is notified of logging out account| Pass |
 | User can not sign up with an email currently in use | Pass |
 | User can not sign up with a username currently in use | Pass |
 
@@ -631,15 +634,33 @@ Google Lighthouse was used to test for accessibility for each page.
 
 | Test |Result  |
 |--|--|
-| User can navigate to Feed | Pass |
+| User can navigate to biography | Pass |
+| User can navigate to reviews | Pass |
+| User can navigate to what is reiki | Pass |
+| User can navigate to benefits of reiki | Pass |
+| User can navigate to courses | Pass |
+| User can navigate to sessions | Pass |
+| User can navigate to store clothes & accessories | Pass |
+| User can access the product details | Pass |
+| User can add products to the cart | Pass |
+| User can adjust contents of the cart | Pass |
+| User can navigate back from the cart to the products | Pass |
+| User can checkout | Pass |
+| User can confirm payment | Pass |
 | User can navigate to login page | Pass |
 | Non logged in user can navigate to register page | Pass |
 | Logged in user can access their profile | Pass |
+| Logged in user can update their profile | Pass |
 | Logged in user can navigate to logout page | Pass |
 | Logo takes user to landing page | Pass |
-| SuperUser can access admin panel | Pass |
-| 403 page displayed as intended | Pass |
-| 404 page displayed as intended | Pass |
+| Logged in user can leave a review | Pass |
+| Users can access the contact form from discovery call button | Pass |
+| Users can access the contact form from footer | Pass |
+| Footer links act as intended | Pass |
+| Footer social media links open in a new tab | Pass |
+| SuperUser can access admin panel to manage website | Pass |
+| 500 homepage button take users to homepage | Pass |
+| 404 homepage button take users to homepage | Pass |
 
 ---
 
@@ -649,8 +670,8 @@ Google Lighthouse was used to test for accessibility for each page.
 |--|--|
 | All buttons act as intended | Pass |
 | All links act as intended | Pass |
-| Image links act as intended | Pass |
-| Image modal acts as intended | Pass |
+| Product links act as intended | Pass 
+
 
 ---
 
@@ -660,29 +681,33 @@ Google Lighthouse was used to test for accessibility for each page.
 |--|--|
 | Non logged in user cannot access profile page | Pass|
 | Non superuser cannot access admin panel |Pass|
+| Non superuser cannot access products management |Pass|
+
 
 ---
 
-#### Post Tests
+#### Payments Tests
 
 | Test |Result  |
 |--|--|
-| Posts are visible to all users | Pass |
-| Only logged in user can create post | Pass |
-| Only author of post can edit post | Pass |
-| Only author of post can delete post | Pass |
+| Non logged in user can successfully checkout and pay | Pass |
+| Logged in user can successfully checkout and pay | Pass |
+| Email confirmation of order sent | Pass |
+| On successful payment redirected to checkout success page | Pass |
+| Checkout form notifies user if required information is missing | Pass |
 | Deleting a post deletes all of its data and linked comments | Pass |
+| Stripe webhooks function as intended | Pass |
 
+	
 ---
 
-#### Comment Tests
+#### Toast Messages Tests
 
 | Test |Result  |
 |--|--|
-| Only approved comments are visible to all users | Pass |
-| Only logged in user can post a comment | Pass |
-| Only author of comment can delete comment | Pass |
-| Deleting a comment only deletes the comment | Pass |
+| Toasts modal displays when required | Pass |
+| Toasts modal can be closed | Pass |
+| Success or error messages display appropriately | Pass |
 
 ---
 
@@ -690,12 +715,10 @@ Google Lighthouse was used to test for accessibility for each page.
 
 | Test |Result  |
 |--|--|
-| User can update their username from the profile page | Pass |
-| User can update/add a profile image from the profile page | Pass |
-| User can update edit their email address from the profile page | Pass |
-| User cannot change username to one already in use | Pass|
-| User cannot change email to one already in use | Fail |
-| Deleting a profile only deletes the profile not the user | Pass |
+| User can update their delivery details from the profile page | Pass |
+| User can update edit their phone numberr from the profile page | Pass |
+| User can view their order history | Pass |
+| User can view a specific order details | Pass |
 
 ---
 
@@ -703,17 +726,18 @@ Google Lighthouse was used to test for accessibility for each page.
 
 | Test | Result  |
 |--|--|
-| Admin can add posts | Pass |
-| Admin can add comments | Pass |
-| Admin can update posts | Pass |
-| Admin can update comments | Pass |
-| Admin can approve comments | Pass |
-| Admin can update profiles | Pass |
-| Admin can delete posts | Pass |
-| Admin can delete comments | Pass |
-| Admin can delete profiles | Pass |
-| Admin can delete users | Pass |
-| Deleting a user deletes all of their posts and comments also | Pass |
+| Admin can add products & categories | Pass |
+| Admin can update products & categories | Pass |
+| Admin can delete products & categories | Pass |
+| Admin can add users and profiles | Pass |
+| Admin can update users and profiles | Pass |
+| Admin can delete users and profiles | Pass |
+| Admin can verify user emails | Pass |
+| Admin can view and manage orders | Pass |
+| Admin can view and manage contact form requests | Pass |
+| Admin can add, update or delete FAQs | Pass |
+| Admin can manage reviews | Pass |
+| Admin can approve reviews | Pass |
 
 [Back to top](#contents)
 
