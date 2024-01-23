@@ -36,6 +36,12 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
     - [Login Page](#login-page)
     - [Logout Page](#logout-page)
     - [Future Features](#future-features)
+  - [Search Engine Optimization and Social Media Marketing](#search-engine-optimization-and-social-media-marketing)
+    - [Keywords](#keywords)
+    - [Sitemaps](#sitemaps)
+    - [Robots](#robots)
+    - [Social Media Marketing](#social-media-marketing)
+    - [Newsletter Marketing](#newsletter-marketing)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks](#frameworks)
@@ -333,6 +339,40 @@ The website is composed primarily of four...
 ### Future Features
 - future features
 [Back to top](#contents)
+
+## Search Engine Optimization and Social Media Marketing
+In order to improve the business's visibility to search engines I used the approach of generating a list of keywords, a sitemap.xml file, and a robots.txt file. I embedded a newletter signup form in the footer and also provided a links on the website to its Facebook business page and other social media pages. 
+
+### Keywords
+Appropriate keywords were used that align with the site. These will help improve the website's visibility and also help users when using online search engines to find the site. I used both short-tail keywords & long-tail keyword phrases.
+
+I have included a screenshot of the head element from my base.html page that shows the keywords within the relevant meta tag.
+
+<details>
+    <summary>Keywords</summary>
+    <img src="media/readme/seo/keywords.png">
+</details>
+
+### Sitemaps
+I generated a sitemap.xml file for the site using XML-Sitemaps and included it in the root level of the project repository. This will help search engines crawl the site more effectively.
+### Robots
+I created a robots.txt at the root level of the project file. This tells search engine crawlers which URLs the crawler can access on the site. This is used mainly to avoid overloading the site with requests.
+### Social Media Marketing
+Social media marketing is used by this business to help grow an online following and expand the business. The social media outlets utilised are:
+- [Facebook](https://www.facebook.com/people/Bailey-Barbour-Reiki/100085606613938/)
+- [YouTube](https://www.youtube.com/@baileybarbourreiki)
+- [Instagram](https://www.instagram.com/baileybarbourreiki)
+- [TikTok](https://www.tiktok.com/@baileybarbourreiki)
+- [Insight Timer](https://insighttimer.com/BaileyBarbour)
+
+A screenshot of the facebook business page can be seen below.
+<details>
+    <summary>Facebook</summary>
+    <img src="media/readme/marketing/facebook.jpeg">
+</details>
+
+### Newsletter Marketing
+An embedded mailchimp newsletter form is included in the footer of the website and available throughout the whole site. Users can subscribe to the newletter to hear of any updates or offers. In this way the business can grow an audience and send marketing material their way to improve sales. 
 
 ##  Technologies Used
 ### Languages
