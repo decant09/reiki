@@ -1,9 +1,11 @@
-# Reiki
-Description
+# Bailey Barbour Reiki
 
-![](responsive image)  
+![](/media/readme/testing/amiresponsive.png)  
 
-To visit the live link to bokeh on Heroku click [here]().  
+Bailey Barbour Reiki is a fully functioning e-commerce web application. The site allows users to view & purchase the products & services provided by the business. Users can create accounts, leave reviews, & contact the business using a contact form. The site also enables administrators to add, edit and remove products, as well as view contact enquiries & pre-approve reviews before they appear on the live site.  
+
+To visit the live link to Bailey Barbour Reiki on Heroku click
+[here](https://decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com/).  
 
 ## Contents
 - [Reiki](#reiki)
@@ -376,12 +378,14 @@ The website is composed primarily of four...
     - Used for the camera logo, github logo, comments, edit and delete icons.
 - Google Dev Tools
     - Used for responsiveness investigations, isolating code, troubleshooting, and testing features.
-- [Website Mockup Generator](https://websitemockupgenerator.com/)
+- [Am I Responsive](https://ui.dev/amiresponsive)
     - Used to generate an image to show responsiveness across different device sizes.
 - [Pip](https://pypi.org/project/pip/)
     - For installing python packages.
 - [Graphiz](https://dreampuf.github.io/GraphvizOnline/)
   - Used to generate the database entity relationship diagram.
+- [XML-Sitemaps](https://www.xml-sitemaps.com)
+    - Used to generate the sitemap.xml file.  
 
 [Back to top](#contents)
 
