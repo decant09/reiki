@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: https://decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com/sitemap.xml
