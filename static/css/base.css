@@ -120,6 +120,14 @@ footer {
     width: 50%;
 }
 
+/* mailchimp */
+#mc_embed_signup {
+    background:#fff;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    width: 600px;
+}
+
 /* overlay */
 
 .overlay {
@@ -278,7 +286,12 @@ footer {
         padding-left: 0.25rem !important;
         min-width: 125px;
     }
-  }
+
+    /* mailchimp */
+    #mc_embed_signup {
+        width: 400px;
+    }
+}
 
 /* media queries < 425px */
 
@@ -298,5 +311,10 @@ footer {
 
     .footer-link-left {
         padding-right: 0px;
+    }
+
+    /* mailchimp */
+    #mc_embed_signup {
+        width: 300px;
     }
 }
