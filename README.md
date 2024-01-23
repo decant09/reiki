@@ -111,13 +111,31 @@ about colour scheme
 #### Typography
 about typography
 #### Agile Development
-An agile development approach was taken to create this project. A project board was created using GitHub Projects. User stories were assigned to epics. MoSCow prioritization was used to prioriitize epics and user stories by assigning custom labels that denote a level of importance. Custom milestones were also created to help keep the project on track. Epics and user stories were assigned to the different areas of the kanban depending on their status. The areas were:
+An agile development approach was taken to create this project. A project board was created using GitHub Projects. User stories were assigned to epics. MoSCow prioritization was used to prioritize epics and user stories by assigning custom labels that denote a level of importance. Custom milestones were also created to help keep the project on track. Epics and user stories were assigned to the different areas of the kanban depending on their status. The areas were:
 - To Do
 - In Progress
 - Done
 - Future Implementation  
 
+The EPICs of the project were:
+1. [Planning](https://github.com/decant09/reiki/issues/10)
+2. [Navigation](https://github.com/decant09/reiki/issues/5)
+3. [Registration, User Accounts & Profiles](https://github.com/decant09/reiki/issues/16)
+4. [Cart & Checkout](https://github.com/decant09/reiki/issues/23)
+5. [Admin & Store Management](https://github.com/decant09/reiki/issues/29)
+6. [Product Views & Sorting](https://github.com/decant09/reiki/issues/33)
+7. [FAQ & Contact](https://github.com/decant09/reiki/issues/37)
+8. [Newsletter & Blog](https://github.com/decant09/reiki/issues/41)
+9. [Reviews](https://github.com/decant09/reiki/issues/45)
+10. [SEO](https://github.com/decant09/reiki/issues/49)
+
+The milestones were:
+1. [Planning Phase](https://github.com/decant09/reiki/milestone/1)
+2. [MVP Release](https://github.com/decant09/reiki/milestone/2)
+3. [Complete Additional Features & Submit](https://github.com/decant09/reiki/milestone/3)
+
 The project board can viewed [here](https://github.com/users/decant09/projects/8/views/1) on the GitHub Projects Page.
+
 #### Wireframes
 Wireframes were created for the website layout including mobile wireframes for pages that have a significantly different layout to the desktop version.
 
