@@ -311,6 +311,12 @@ The main features of the website are documented in this section.
             <summary>Confirmation Email</summary>
             <img src="media/readme/web_images/confirmation_email.png">
         </details>
+- Webhooks
+    - The site uses a webhook system to ensure that the payment process is secure and robust and cannot be interrupted or corrupted, either through user error or malicious intent. Webhooks payment intents are incorporated via the Stripe payment system and are handled on the Stripe website.
+        <details>
+            <summary>Webhook</summary>
+            <img src="media/readme/web_images/stripe_success.png">
+        </details>
 - Profile
     - The profile page contains the users stored delivery information and a history of previous orders. The user can update their information and view order details by clicking on the order number which displays the order details that was presented to them on the checkout success above. When viewing the order details a message is displayed clarifying that this is a previous order and that an email was sent at the time of purchase.
         <details>
@@ -339,6 +345,16 @@ The main features of the website are documented in this section.
         <details>
             <summary>Contact Admin</summary>
             <img src="media/readme/web_images/contact_admin.jpeg">
+        </details>
+- Newsletter
+    - A newsletter can be subscribed to and the service is implemented using Mailchimp. Once the user enters their email address a success message is displayed and the email address is added to the mail list in the Mailchimp account.
+        <details>
+            <summary>Newsletter Subscribe</summary>
+            <img src="media/readme/web_images/newsletter_subscribe.png">
+        </details>
+        <details>
+            <summary>Newsletter Audience</summary>
+            <img src="media/readme/web_images/newsletter_audience.png">
         </details>
 - Reviews
     - Reviews of the business are located on the reviews page in the Meet Bailey dropdown in the navbar. There are also three reviews with homepage boolean field set to true that appear on the homepage. Users, if logged in, can leave a review and a message is displayed informing them that they have successfully left a review and that it will appear once the admin approves it. The review post form is located at the bottom of the reviews page and is only visible to logged in users. Reviews can be managed by the admin in the admin panel where they can approve reviews and change homepage status.
@@ -396,6 +412,10 @@ The main features of the website are documented in this section.
             <summary>Product Success</summary>
             <img src="media/readme/web_images/product_success.png">
         </details>
+        <details>
+            <summary>Product Success</summary>
+            <img src="media/readme/web_images/product_success.png">
+        </details>
 - Additional Information Pages
     - Pages that contain information for the user are also available on the website.
         <details>
@@ -427,7 +447,11 @@ The main features of the website are documented in this section.
 - Restrictions
     - Users are redirected from pages they do not have authorization to view. If a user was to manually type the URL for the add products page for example they would be redireted back to the login page.
 ### Future Features
+- The original plan for this website was for there to be blog page where the business owner could upload and manage content as desired. Wireframes were skectched up and the user story for the blog included in the project board however I did not have time to implement this feature. This facility is intended to allow the business owner to post interesting research articles in the field of Reiki and Sound Healing and will be s useful feature in future.
 - Although the admin can see messages from the contact form in the admin site it would be better if this was implemented on the frontend with the ability to manage and reply to messages directly there. Therefore this is a feature I would like to implement in the future to improve the utility of the site for the business owner.
+- Managing the FAQs from the frontend is also an intended future feature. The business owner could create, update and delete them as desired instead of having to access the Django admin.
+- Managing the reviews of the business from the frontend is also an intended future feature. The business owner could decide from the frontend what reviews they want posted on the homepage, approve reviews, or delete them as desired instead of having to access the Django admin.
+
 [Back to top](#contents)
 
 ## Search Engine Optimization and Social Media Marketing
