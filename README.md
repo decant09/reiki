@@ -119,7 +119,11 @@ An agile development approach was taken to create this project. A project board 
 
 The project board can viewed [here](https://github.com/users/decant09/projects/8/views/1) on the GitHub Projects Page.
 #### Wireframes
-Wireframes were created for the website layout.
+Wireframes were created for the website layout including mobile wireframes for pages that have a significantly different layout to the desktop version.
+
+Some slight layout differences exist between the finished website and the wireframes. For example the biography & review pages on the finished site do not have images.
+
+The blog wireframes were created although in the end this feature does not exist on the finished website.  
 <details>
 <summary>Landing Page</summary>
 <img src="media/readme/wireframes/landing_page.png">
@@ -217,22 +221,6 @@ Pre-project planning involved generating an entity relationship diagram. This wa
 <summary>Entity Relationship Diagram</summary>
 <img src="media/readme/database/lucid_erd_diagram.png">
 </details>  
-
-<!-- The database models for this project are shown in the schema below and were created using [Graphviz](https://dreampuf.github.io/GraphvizOnline/). I have included flowchart diagrams to show how the different models relate to each other. The master flowchart shows all of the extended models in the project, some of which were not used but came with the Django Aallauth import, for example the social models. I have included a more refined flowchart showing the models I created and how they relate to each other. I have also included the model structure in tabular form. -->
-<details>
-<summary>Master Flowchart</summary>
-<img src="media/readme/database/image.png">
-</details>  
-<details>
-<summary>Refined Flowchart</summary>
-<img src="media/readme/database/image.png">
-</details>
-<details>
-<summary>Master Table</summary>
-<img src="media/readme/database/image.png">
-</details>
-
-Tables....
 
 [Back to top](#contents)
 
