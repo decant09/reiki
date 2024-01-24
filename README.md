@@ -1471,7 +1471,7 @@ The steps below describe how to fork or clone the repository if desired.
 - The layout of the site drew some inspiration from Emma Hewson's [Island Bees](https://github.com/emmahewson/island-bees/tree/main) project and also from Ally Bothroyd's [website](https://allyboothroyd.com/). Emma's project was also referenced when creating some of the models for this project.
 - Django import statements were too long for PEP8 so used parentheses as per [stackoverflow](https://stackoverflow.com/questions/17273847/long-imports-in-python).
 - Reiki FAQ content from (reiki.org)[https://www.reiki.org/faqs].
-
+- The business's current website, [baileybarbour.com](https://www.baileybarbour.com/), was used for the content of this site.
 ### Acknowledgements
 - My Mentor Chris Quinn for continuous helpful feedback.
 - Tutor support at Code Institute for their amazing support.
