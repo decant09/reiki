@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def cart_contents(request):
 
     cart_items = []
@@ -33,7 +34,7 @@ def cart_contents(request):
                     'quantity': quantity,
                     'product': product,
                     'size': size,
-                })      
+                })
                 if product.delivery_charge is True:
                     total_if_delivery_charge += (product.price * quantity)
 
@@ -45,10 +46,10 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
 
-    context ={
+    context = {
         'cart_items': cart_items,
         'total': total,
         'product_count': product_count,
