@@ -58,7 +58,14 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
       - [Known](#known)
       - [Solved](#solved)
   - [Deployment and Local Development](#deployment-and-local-development)
-    - [Deployment](#deployment)
+    - [ElephantSQL Database](#elephant-sql)
+    - [Amazon AWS](#amazon-aws)
+      - [S3 Bucket](#s3-bucket)
+      - [IAM](#iam)
+      - [Final AWS Setup](#final-aws-setup)
+    - [Stripe API](#stripe-api)
+    - [Gmail API](#gmail-api)
+    - [Heroku Deployment](#)
     - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
       - [How to Clone](#how-to-clone)
@@ -1170,71 +1177,267 @@ Google Lighthouse was used to test for accessibility for each page. Some minor a
 [Back to top](#contents)
 
 ## Deployment and Local Development
-### Deployment
-The site was deployed to Heroku and the following steps were followed to do so:
+The live deployed application can be found deployed on [Heroku](https://decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com/).
 
-- Login to your [Heroku](https://www.heroku.com/) account, or create an account.
-- To create a new app click the "New" button in the upper right hand corner and select "Create new app".
-- Choose an app name, select your region and click "Create app". The app is created to return to later.
-- Next a [Cloudinary](https://cloudinary.com/) account will be required as Cloudinary is used to host the images of the website.
-- Login into Cloudinary or you can create an account for free.
-- Navigate to the dashboard and copy and store the value of the "API Environment Variable" and be sure to include cloudinary:// at the start, this will be used in the Heroku Config Vars.
-- An [ElephantSQL](https://www.elephantsql.com/) account will be required as ElephantSQL is used to host the database.
-- Login to ElephantSQL or create an account for free.
-- Click on "Create New Instance".
-- Name your instance, select the Tiny Turtle plan which is free, and leave the input tags blank.
-- Select the region and choose the nearest data centre to your location.
-- Click "Review" and then click "Create instance" if details are as intended.
-- In the Instances section click on the instance name that was just created.
-- In the Details section click on the copy icon located next to the URL. This will be used in the Heroku Config Vars.
-- Back in Heroku select the app that you just set up.
-- In the settings tab of the app click on "Reveal Config Vars" and store the required config var keys and values as below:
-    - CLOUDINARY_URL: *Cloudinary URL as obtained above*
-    - DATABASE_URL: *ElephantSQL postgres database URL as obtained above*
-    - PORT: 8000
-    - DISABLE_COLLECTSTATIC: 1 (This is left in place during development but must be removed befored deployment)
-- Now, in your development environment, inside the Django app repository, create a new file called env.py. Within this file import the os library and set the environment variable for the CLOUDINARY_URL and DATABASE_URL as:
-     - os.environ["CLOUDINARY_URL"]= "*Cloudinary URL as obtained above*"
-     - os.environ["DATABASE_URL"]= "*ElephantSQL postgres database URL as obtained above*"
-- Add a secret key to the app using:
-    - os.environ["SECRET_KEY"] = "*your secret key goes here*"
-- Add the secret key just created to the Heroku Config Vars as SECRET_KEY for the KEY value and the secret key value you created as the VALUE.
-- In the settings.py file within the django app, import Path from pathlib, import os and import dj_database_url.
-- Insert the line:
-  - if os.path.isfile("env.py"): iport env
-- Remove the insecure secret key that django has in the settings file by default and replace it with:
-  - SECRET_KEY = os.environ.get('SECRET_KEY').
-- Replace the databases section with:
-  - DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
-- Ensure the correct indentation for python is used.
-- In the terminal migrate the models over to the new database connection using `python3 manage.py makemigrations` and `python3 manage.py migrate`.
-- Add the cloudinary libraries to the list of installed apps, the order they are inserted is important, 'cloudinary_storage' goes above 'django.contrib.staitcfiles' and 'cloudinary' goes below it.
-- In the Settings.py file - add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
-- Link the file to the templates directory in Heroku TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates').
-- Change the templates directory to TEMPLATES_DIR - 'DIRS': [TEMPLATES_DIR].
-- Add Heroku to the ALLOWED_HOSTS list, the format will be the app name given in Heroku when creating the app followed by ".herokuapp.com".
-- In your code editor, create three new top level folders, media, static, templates.
-- Create a new file on the top level directory - Procfile.
-- Within the Procfile add the code:
-  - web: guincorn PROJECT_NAME.wsgi
-- Set up your requiremtnts.txt file to save the libraries that will need to be installed by running the following command in the terminal:
-  - `pip freeze -> requiremnts.txt`.
-- In the terminal, add the changed files, commit and push to GitHub.
-- In Heroku, navigate to the deployment tab and deploy the branch manually - watch the build logs for any errors.
-- Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the [live site](https://decant09-bokeh-photo-blog-0c5a394f8c26.herokuapp.com/).
+### ElephantSQL Database
+
+The PostgreSQL Database for this project was obtained using [ElephantSQL](https://www.elephantsql.com), a service which you can sign-up to with your GitHub account. Once signed up follow these steps:
+
+- Click **Create New Instance** to start a new database.
+- Name used: `Bailey Barbour Reiki`.
+- Select the **Tiny Turtle (Free)** plan.
+- **Tags** can be left blank.
+- Select the **Region** and **Data Center** closest to you in this case EU-West-1.
+- Once created, click on the new database name, where you can view the database URL which be needed for the Heroku Config Vars.
+
+### Amazon AWS
+
+This project uses [Amazon Web Services (AWS)](https://aws.amazon.com) to store its media and static files.
+
+Once you've created an AWS account and logged-in, navigate to the **AWS Management Console** page & follow these series of steps to get your project connected.
+
+#### S3 Bucket
+
+- Search for **S3**.
+- Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
+- Uncheck **Block all public access**, and acknowledge that the bucket will be public (required for it to work on Heroku).
+- From **Object Ownership**, make sure to have **ACLs enabled**, and **Bucket owner preferred** selected.
+- From the **Properties** tab, turn on static website hosting, and type `index.html` and `error.html` in their respective fields, then click **Save**.
+- From the **Permissions** tab, paste in the following CORS configuration:
+
+	```shell
+	[
+		{
+			"AllowedHeaders": [
+				"Authorization"
+			],
+			"AllowedMethods": [
+				"GET"
+			],
+			"AllowedOrigins": [
+				"*"
+			],
+			"ExposeHeaders": []
+		}
+	]
+	```
+
+- Copy your **ARN** string.
+- From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
+	- Policy Type: **S3 Bucket Policy**
+	- Effect: **Allow**
+	- Principal: `*`
+	- Actions: **GetObject**
+	- Amazon Resource Name (ARN): **paste-your-ARN-here**
+	- Click **Add Statement**
+	- Click **Generate Policy**
+	- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
+
+		```shell
+		{
+			"Id": "Policy1234567890",
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Sid": "Stmt1234567890",
+					"Action": [
+						"s3:GetObject"
+					],
+					"Effect": "Allow",
+					"Resource": "arn:aws:s3:::your-bucket-name/*"
+					"Principal": "*",
+				}
+			]
+		}
+		```
+
+	- Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
+	- Click **Save**.
+- From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
+	- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
+
+#### IAM
+
+Back on the AWS Services Menu, search for and open **IAM** (Identity and Access Management).
+Once on the IAM page, follow these steps:
+
+- From **User Groups**, click **Create New Group**.
+	- Name: `manage-bailey-barbour-reiki`
+- Tags are optional, but you must click it to get to the **review policy** page.
+- From **User Groups**, select your newly created group, and go to the **Permissions** tab.
+- Open the **Add Permissions** dropdown, and click **Attach Policies**.
+- Select the policy, then click **Add Permissions** at the bottom when finished.
+- From the **JSON** tab, select the **Import Managed Policy** link.
+	- Search for **S3**, select the `AmazonS3FullAccess` policy, and then **Import**.
+	- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
+
+		```shell
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Effect": "Allow",
+					"Action": "s3:*",
+					"Resource": [
+						"arn:aws:s3:::your-bucket-name",
+						"arn:aws:s3:::your-bucket-name/*"
+					]
+				}
+			]
+		}
+		```
+	
+	- Click **Review Policy**.
+	- Name: `decant09-bailey-barbour-reiki-policy`
+	- Provide a description:
+		- "Access to S3 Bucket for Bailey Barbour Reiki static files."
+	- Click **Create Policy**.
+- From **User Groups**, click your `manage-bailey-barbour-reiki`.
+- Click **Attach Policy**.
+- Search for the policy you've just created `decant09-bailey-barbour-reiki-policy` and select it, then **Attach Policy**.
+- From **User Groups**, click **Add User**.
+	- Name: `bailey-barbour-reiki-staticfiles-user`
+- For "Select AWS Access Type", select **Programmatic Access**.
+- Select the group to add your new user to: `manage-bailey-barbour-reiki`
+- Tags are optional, but you must click it to get to the **review user** page.
+- Click **Create User** once done.
+- You should see a button to **Download .csv**, so click it to save a copy on your system.
+- If you don't see an option to downlod the CSV file go to IAM and select **Users**
+- Select the user for whom you wish to create a CSV file.
+- Select the **Security Credentials** tab.
+- Scroll to **Access Keys** and click **Create access key**
+- Select **Application running outside AWS**, and click next.
+- On the next screen, you can leave the **Description tag** value blank. Click **Create Access Key**.
+- Click the **Download .csv file** button.
+    - **IMPORTANT**: once you pass this page, you cannot come back to download it again, so do it immediately!
+	- This contains the user's **Access key ID** and **Secret access key**.
+	- `AWS_ACCESS_KEY_ID` = **Access key ID**
+	- `AWS_SECRET_ACCESS_KEY` = **Secret access key**
+- These will be needed for the Heroku Config Vars.
+
+#### Final AWS Setup
+
+- Follow the steps described for [Heroku Deployment](#heroku-deployment) described later and then return here to follow these final AWS steps below.
+- If Heroku Config Vars has `DISABLE_COLLECTSTATIC` still, this can be removed now, so that AWS will handle the static files.
+- Back within **S3**, create a new folder called: `media`.
+- Inside the media file select **Upload** and **Add Files**.
+- Select the images from your hard-drive that you wish to upload.
+- Under **Manage Public Permissions**, select **Grant public read access to this object(s)**.
+- No further settings are required, so click next through to the end and **Upload**.
+
+### Stripe API
+
+This project uses [Stripe](https://stripe.com) to handle the ecommerce payments.
+
+Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
+
+- From your Stripe dashboard, click **API keys for developers**.
+- You'll have two keys here:
+	- `STRIPE_PUBLIC_KEY` = Publishable Key (starts with **pk**)
+	- `STRIPE_SECRET_KEY` = Secret Key - click **Reveal test key** (starts with **sk**)
+
+As a backup, in case users prematurely close the checkout page during payment, we can include Stripe Webhooks.
+
+- From your Stripe dashboard, click **Developers**, and select **Webhooks**.
+- From there, click **Add Endpoint**.
+	- `https://decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com/checkout/wh/`
+- Click **receive all events**.
+- Click **Add Endpoint** to complete the process.
+- You'll have a new key here under "Signing secret":
+	- `STRIPE_WH_SECRET` = Under signing Secret - click `Reveal` (starts with **wh**)
+
+### Gmail API
+
+This project uses [Gmail](https://mail.google.com) to handle sending emails to users for account verification and purchase order confirmations.
+
+Once you've created a Gmail (Google) account and logged-in, follow these series of steps to get your project connected.
+
+- Click on the **Account Settings** (cog icon) in the top-right corner of Gmail.
+- Click on the **See all settings** link.
+- Click on the **Accounts and Import** tab.
+- Within the section called "Change account settings", click on the link for **Other Google Account settings**.
+- This opens a page in a new tab, select **Security** on the left.
+- Select **2-Step Verification** to turn it on. (verify your password and account)
+- Once verified, select **Turn On** for 2FA.
+- Navigate back to the **Security** page, and you'll see a new option called **App passwords**.
+- This might prompt you once again to confirm your password and account.
+- Select **Mail** for the app type.
+- Select **Other (Custom name)** for the device type.
+	- Any custom name, such as "Django" or the project name.
+- You'll be provided with a 16-character password (API key).
+	- Save this somewhere locally, as you cannot access this key again later!
+	- `EMAIL_HOST_PASS` = user's 16-character API key
+	- `EMAIL_HOST_USER` = user's own personal Gmail email address
+
+### Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com) for deployment to the web. The deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
+
+| Key | Value |
+| --- | --- |
+| `AWS_ACCESS_KEY_ID` | user's own value |
+| `AWS_SECRET_ACCESS_KEY` | user's own value |
+| `DATABASE_URL` | user's own postgres value |
+| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `EMAIL_HOST_PASS` | user's own value |
+| `EMAIL_HOST_USER` | user's gmail |
+| `SECRET_KEY` | user's own value |
+| `STRIPE_PUBLIC_KEY` | user's own value |
+| `STRIPE_SECRET_KEY` | user's own value |
+| `STRIPE_WH_SECRET` | user's own value |
+| `USE_AWS` | True |
+
+Heroku needs two additional files in order to deploy properly.
+
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file need to be updated using:
+
+- `pip3 freeze --local > requirements.txt`
+
+Create a **Procfile** at the root level of the project:
+
+- Insert `web: gunicorn app_name.wsgi:application`
+- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+
+- Ensure Heroku is installed for these following commands to work.
+- If it is not run `curl https://cli-assets.heroku.com/install.sh | sh` in the Terminal/CLI.
+- Then connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+	- `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
 
 ### Local Development
 The steps below describe how to fork or clone the repository if desired.
 #### How to Fork
 1. Log in to Github.
-2. Navigate to the [repository](https://github.com/decant09/bokeh) for this website.
+2. Navigate to the [repository](https://github.com/decant09/reiki) for this website.
 3. Click the Fork button in the top right corner.
 4. You will be brought to a new page with a short form to be completed.
 5. Upon completing, click on the "Create fork" button and this will create a fork of the repository in your personal account.
 
 #### How to Clone
 1. Log in to GitHub.
-2. Navigate to the [repository](https://github.com/decant09/bokeh) for this website.
+2. Navigate to the [repository](https://github.com/decant09/reik) for this website.
 3. Click on the Code button and a modal will appear.
 4. Within this modal select the local tab.
 5. Within this tab there are HTTPS, SSH, or GitHub CLI tabs.
@@ -1244,7 +1447,7 @@ The steps below describe how to fork or clone the repository if desired.
 9. Type `git clone` into the terminal, then paste the URL you copied in step 6.
 10. Press **Enter** to create your local clone.
 11. In the terminal install the requirements by using the following: `pip3 install -r requirements.txt`.
-12. If you have your own packages that have been installed, then the requirements file needs updated using: `pip3 freeze --local > requirements.txt`.
+12. If you have your own packages that have been installed, then the requirements file needs to be updated using: `pip3 freeze --local > requirements.txt`.
 13. Next create the env.py file which tells our project which variables to use.
 14. Add the file to a .gitignore to prevent it from being pushed to github.
 15. Start the Django app: `python3 manage.py runserver`.
