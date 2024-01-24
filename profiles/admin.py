@@ -17,6 +17,6 @@ class UserProfileAdmin(admin.ModelAdmin):
         'default_country', 'default_phone_number',)
 
     ordering = ('user',)
-    
+
 
 admin.site.register(UserProfile, UserProfileAdmin)
