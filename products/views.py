@@ -18,7 +18,6 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        
     context = {
         'products': products,
         'current_categories': categories,
@@ -54,10 +53,11 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request,
-            'Failed to add product. Please ensure the form is valid.')
+                           'Failed to add product. Please ensure the form ' +
+                           'is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -82,7 +82,8 @@ def edit_product(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request,
-            'Failed to update product. Please ensure the form is valid.')
+                           'Failed to update product. Please ensure the ' +
+                           'form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
