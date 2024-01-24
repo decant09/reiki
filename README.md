@@ -639,10 +639,20 @@ An embedded mailchimp newsletter form is included in the footer of the website a
     </details>  
 
 #### CSS
-- Style Sheet
+- Base
     <details>
     <summary>Result - No error found.</summary>
-    <img src="static/images/readme/testing/css/css.png">
+    <img src="media/readme/testing/css_validator/css_val_base.png">
+    </details>  
+- Checkout
+    <details>
+    <summary>Result - No error found.</summary>
+    <img src="media/readme/testing/css_validator/css_val_checkout.png">
+    </details>  
+- Profile
+    <details>
+    <summary>Result - No error found.</summary>
+    <img src="media/readme/testing/css_validator/css_val_profile.png">
     </details>  
 
 ### JShint
