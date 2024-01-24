@@ -222,7 +222,7 @@ Pre-project planning involved generating an entity relationship diagram. This wa
 The main features of the website are documented in this section.
 
 - Navigation
-    - The Desktop navigation is available throughout the website. It contains all of the relevant links to allow the user to navigate around the site. Certain links are available to users depending on logged in status or admin status. The logo is a link to the homepage. There is also a cart icon that displays a running total of itmes in the cart. This can be clicked on to take the user to the checkout details page.
+    - The navigation bar is available throughout the website. It contains all of the relevant links to allow the user to navigate around the site. Certain links are available to users depending on logged in status or admin status. The logo is a link to the homepage. There is also a cart icon that displays a running total of itmes in the cart. This can be clicked on to take the user to the checkout details page.
         <details>
         <summary>Navbar Admin</summary>
         <img src="media/readme/web_images/navbar_admin.png">
@@ -264,7 +264,7 @@ The main features of the website are documented in this section.
             <img src="media/readme/web_images/logout_success.png">
         </details>
 - Products
-    - Products are displayed pages based on the categories of Courses, Sessions, Clothes and accessories. Each product can be clicked on to take the user to the product detail page where the user can add product quantities to the cart.
+    - Products are displayed on pages based on the categories of Courses, Sessions, Clothes and Accessories. Each product can be clicked on to take the user to the product detail page where the user can add product quantities to the cart.
         <details>
             <summary>Products</summary>
             <img src="media/readme/web_images/products.png">
@@ -279,7 +279,7 @@ The main features of the website are documented in this section.
             <img src="media/readme/web_images/products_discover.png">
         </details>
 - Cart
-    - The cart contains a list of products that the user has added to their cart and they can also edit quantities or remove items if desired. Messages are displayed to the user in a modal on adding, removing or editing the contents of the cart. The cart also contains a summary of charges charges the user can expect to pay upon checking out.
+    - The cart contains a list of products that the user has added to their cart and they can also edit quantities or remove items if desired. Messages are displayed to the user in a modal on adding, removing or editing the contents of the cart. The cart also contains a summary of charges the user can expect to pay upon checking out.
         <details>
             <summary>Cart Success</summary>
             <img src="media/readme/web_images/cart_success.png">
@@ -293,7 +293,7 @@ The main features of the website are documented in this section.
             <img src="media/readme/web_images/cart_charges.png">
         </details>
 - Checkout
-    - The checkout page contains the details of the cart and a form to enter information required for the checkout. There is a stripe form located at the bottom for the user to enter card details. The user can also opt to save their details for futures so that the form will be prepopulated for them on their next visit.
+    - The checkout page contains the details of the cart and a form to enter information required for the checkout. There is a stripe form located at the bottom for the user to enter card details. The user can also opt to save their details for future visits so that the form will be prepopulated for them on their next checkout.
         <details>
             <summary>Checkout Details</summary>
             <img src="media/readme/web_images/checkout_details.png">
@@ -389,7 +389,7 @@ The main features of the website are documented in this section.
             <img src="media/readme/web_images/faq.png">
         </details>
 - Manage Products
-    - Products can be managed by the admin superuser. This can be access from the navbar Manage Products link as shown above. Here the admin can add products using the form.
+    - Products can be managed by the admin superuser. This can be accessed from the navbar Manage Products link as shown above. Here the admin can add products using the form.
         <details>
             <summary>Add Product</summary>
             <img src="media/readme/web_images/product_add1.png">
@@ -398,7 +398,7 @@ The main features of the website are documented in this section.
             <summary>Add Product</summary>
             <img src="media/readme/web_images/product_add2.png">
         </details>
-    - Products can be edited and delted by using the buttons available only to the superuser on the products and product details page. Clicking the edit button displays a form prepopulated with all of the product details.
+    - Products can be edited and deleted by using the buttons available only to the superuser on the products and product details page. Clicking the edit button displays a form prepopulated with all of the product details.
         <details>
             <summary>Edit or Delete Product</summary>
             <img src="media/readme/web_images/product_ed_del_btn.png">
@@ -416,12 +416,8 @@ The main features of the website are documented in this section.
             <summary>Product Success</summary>
             <img src="media/readme/web_images/product_success.png">
         </details>
-        <details>
-            <summary>Product Success</summary>
-            <img src="media/readme/web_images/product_success.png">
-        </details>
 - Additional Information Pages
-    - Pages that contain information for the user are also available on the website.
+    - Pages that contain information about Bailey, Reiki, the Privacy Policy, and the Terms and Conditions are also available for the user on the website.
         <details>
             <summary>Biography</summary>
             <img src="media/readme/web_images/biography.png">
@@ -451,7 +447,7 @@ The main features of the website are documented in this section.
 - Restrictions
     - Users are redirected from pages they do not have authorization to view. If a user was to manually type the URL for the add products page for example they would be redireted back to the login page.
 ### Future Features
-- The original plan for this website was for there to be blog page where the business owner could upload and manage content as desired. Wireframes were skectched up and the user story for the blog included in the project board however I did not have time to implement this feature. This facility is intended to allow the business owner to post interesting research articles in the field of Reiki and Sound Healing and will be s useful feature in future.
+- The original plan for this website was for there to be a blog page where the business owner could upload and manage content as desired. Wireframes were skectched up and the user story for the blog included in the project board however I did not have time to implement this feature. This facility is intended to allow the business owner to post interesting research articles in the field of Reiki and Sound Healing and will be a useful feature in future.
 - Although the admin can see messages from the contact form in the admin site it would be better if this was implemented on the frontend with the ability to manage and reply to messages directly there. Therefore this is a feature I would like to implement in the future to improve the utility of the site for the business owner.
 - Managing the FAQs from the frontend is also an intended future feature. The business owner could create, update and delete them as desired instead of having to access the Django admin.
 - Managing the reviews of the business from the frontend is also an intended future feature. The business owner could decide from the frontend what reviews they want posted on the homepage, approve reviews, or delete them as desired instead of having to access the Django admin.
@@ -462,7 +458,7 @@ The main features of the website are documented in this section.
 This website uses a business to customer model because it sells services and goods to customers. The business model consists of using social media including Instagram, Tiktok, Youtube and Facebook to drive traffic to the website where purchases can be made by the consumer. There is an option to sign up for a newsletter and the business is steadily growing their email list for marketing purposes. Email marketing includes selling courses, events, and 1:1 client services, as well as, updating subscribers about new free content on the business’s Youtube channel.
 
 ## Search Engine Optimization and Social Media Marketing
-In order to improve the business's visibility to search engines I used the approach of generating a list of keywords, a sitemap.xml file, and a robots.txt file. I embedded a newletter signup form in the footer and also provided a links on the website to its Facebook business page and other social media pages. 
+In order to improve the business's visibility to search engines I used the approach of generating a list of keywords, a sitemap.xml file, and a robots.txt file. I embedded a newletter signup form in the footer and also provided links on the website to the business's Facebook business page and other social media pages. 
 
 ### Keywords
 Appropriate keywords were used that align with the site. These will help improve the website's visibility and also help users when using online search engines to find the site. I used both short-tail keywords & long-tail keyword phrases.
@@ -535,9 +531,9 @@ An embedded mailchimp newsletter form is included in the footer of the website a
     - Used for version control by utilising the Codeanywhere terminal to commit to Git and push to GitHub.
 - GitHub
     - Used to store the code of the project after being pushed from Git.
-- [Icons8](https://icons8.com/icons/set/camera-favicon).
-    - Used to obtain the browser icon to be displayed in the browser tab.
-- [Convertico](https://convertico.com/).
+- [Icons8](https://icons8.com/icons/set/camera-favicon)
+    - Used to obtain the browser favicon to be displayed in the browser tab.
+- [Convertico](https://convertico.com/)
     - Used to convert a png file to ico file for the favicon.
 - [Balsamiq](https://balsamiq.com/)
     - Used to generate the wireframes for the design of the website.
@@ -553,8 +549,8 @@ An embedded mailchimp newsletter form is included in the footer of the website a
     - Used to generate the sitemap.xml file.
 - [jpg2png](https://jpg2png.com/)
     - To covert large jpg files to png.
-- [Compressjpg](https://compressjpeg.com/)
-    - To reduce large jpg files
+- [Compressjpeg](https://compressjpeg.com/)
+    - To reduce large jpg files.
 - [Canva](https://www.canva.com)
     - Used to create the logo.
 - [Mailchimp](https://mailchimp.com/)
@@ -684,7 +680,7 @@ An embedded mailchimp newsletter form is included in the footer of the website a
 - Stripe Elements  
     <details>
     <summary>Result - One undefined variable Stripe.</summary>
-    <img src="media/readme/testing/jshint/jshint_quantity_input.png">
+    <img src="media/readme/testing/jshint/jshint_stripe_elements.png">
     </details>  
 
 ### PEP8 Validator
@@ -960,23 +956,23 @@ I tested for contrast using the [WAVE web evaluation teting tool](https://wave.w
 </details>
 <details>
 <summary>Products</summary>
-<img src="static/images/readme/testing/webaim/landing.png">
+<img src="media/readme/testing/webaim/webaim_products.png">
 </details>
 <details>
 <summary>Reviews</summary>
-<img src="static/images/readme/testing/webaim/landing.png">
+<img src="media/readme/testing/webaim/webaim_reviews.png">
 </details>
 
 #### Google Lighthouse
 Google Lighthouse was used to test for accessibility for each page. Some minor accesibility and performance issues exist and time did not pemmit me amending these. I did not test pages that were similar in layout to the biography page.
 - Biography  
     <details>
-    <summary>Result - 78</summary>
+    <summary>Result - 91</summary>
     <img src="media/readme/testing/lighthouse/lh_biography.png">
     </details>
 - Cart  
     <details>
-    <summary>Result - 91</summary>
+    <summary>Result - 78</summary>
     <img src="media/readme/testing/lighthouse/lh_cart.png">
     </details>
 - Checkout  
@@ -1044,7 +1040,7 @@ Google Lighthouse was used to test for accessibility for each page. Some minor a
 | User can log into account| Pass |
 | User is notified of logging in to account| Pass |
 | User can log out of account| Pass |
-| User is notified of logging out account| Pass |
+| User is notified of logging out of account| Pass |
 | User can not sign up with an email currently in use | Pass |
 | User can not sign up with a username currently in use | Pass |
 
@@ -1079,7 +1075,7 @@ Google Lighthouse was used to test for accessibility for each page. Some minor a
 | Footer links act as intended | Pass |
 | Footer social media links open in a new tab | Pass |
 | Clicking FAQ revelas answer in dropdown | Pass |
-| SuperUser can access admin panel to manage website | Pass |
+| Superuser can access admin panel to manage website | Pass |
 | Navigation bar compresses to 3 button accordion on medium & small screens | Pass |
 | 500 homepage button take users to homepage | Pass |
 | 404 homepage button take users to homepage | Pass |
@@ -1168,19 +1164,21 @@ Google Lighthouse was used to test for accessibility for each page. Some minor a
 
 ### Bugs
 #### Known
-- When you add a product to the cart that is not subject to a delivery charge and is under the free delivery threshold you still get a message displayed to say spend more to avail of free delivery. Rearranging the code in the toast_success.html file and using an if statement with item.product.delivery_charge == True could be used but I was not able to find the correct structure to implement this. There are a few different scenarios, such the cart having a product with a delivery charge and a product without a delivery charge and the grand total still being under the free delivery threshold. In that case a delivery charge is applicable to one item so the message should still appear.
+- When you add a product to the cart that is not subject to a delivery charge and is under the free delivery threshold you still get a message displayed to say spend more to avail of free delivery. Rearranging the code in the toast_success.html file and using an if statement with item.product.delivery_charge == True could be used but I was not able to find the correct structure to implement this. There are a few different scenarios, such as the cart having a product with a delivery charge and a product without a delivery charge and the grand total still being under the free delivery threshold. In that case a delivery charge is applicable to one item so the message should still appear.
 - Inactive products do not show up on the all products page but they do show up on the page that is filtered by category. I possibly need to introduce an is_active filter to the products in the context in the views.py.
 - Deleting an order in the admin panel returns a 500 Internal Sever Error. I was not fully able to investigate this as it was close to submission when I discovered it. 
+- The cart page is not responsive on mobile device viewing. The quantity control buttons and update/remove buttons become cramped and the quantity value display area becomes obscured. The "Keep Shopping" and "Secure Checkout" buttons also remain too large and stack vertically in an undesirable way. I was too late noticing this before the project submission deadline but some simple CSS styling could be used to amend the situation.
 #### Solved
 - After applying the logic to filter products by category I was not able to view the page upon clicking on the navbar link. Clicking on the link did not yield any action. The expected action was that the product page would display with the filter applied for the specific category. I realized that there were data-toggle="dropdown" and aria-expanded="False" attributes in the anchor element. The navbar items had previously been dropdowns with these attributes but I had amended them to simple links without removing them. Removing the attributes resolved the issue.
-- On the cart page the delivery charge was being calculated and including items that were not subject to delivery charge. After playing around with the code a few times and testing a few different scenarios arose where the delivery charge was not being applied correctly. I had created code within an if block to account for items that had delivery_charge is True. After realising that the location of the if blocks were not indented correctly I amended their position and this resolved the error.
+- On the cart page the delivery charge was being calculated and including items that were not subject to delivery charge. After playing around with the code a few times and testing, a few different scenarios arose where the delivery charge was not being applied correctly. I had created code within an if block to account for items that had delivery_charge is True. After realising that the location of the if blocks were not indented correctly I amended their position and this resolved the error.
 - The MEDIA_URL template was not working for products with no images. This was because the contexts processor was not included in the templates settings. 
 - When trying to link the static css file for the checkout app to the checkout.html page it was not working. This was due to the fact that my file structure was incorrect. I was missing a checkout folder within the static folder. I entered the css folder with the checkout.css file into this folder and the issue recolved.
-- Error pages content overflowed onto the footer and adding new CSS classes resolved this.
+- Error pages content overflowed onto the footer and adding new CSS classes resolved this.  
+
 [Back to top](#contents)
 
 ## Deployment and Local Development
-The live deployed application can be found deployed on [Heroku](https://decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com/).
+The live deployed version of the website can be found on [Heroku](https://decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com/). The steps and technologies involved in deploying it are outlined below. The steps on how to fork or clone the repository for the website are also outlined.
 
 ### ElephantSQL Database
 
@@ -1191,7 +1189,7 @@ The PostgreSQL Database for this project was obtained using [ElephantSQL](https:
 - Select the **Tiny Turtle (Free)** plan.
 - **Tags** can be left blank.
 - Select the **Region** and **Data Center** closest to you in this case EU-West-1.
-- Once created, click on the new database name, where you can view the database URL which be needed for the Heroku Config Vars.
+- Once created, click on the new database name, where you can view the database URL which will be needed for the Heroku Config Vars.
 
 ### Amazon AWS
 
@@ -1272,7 +1270,7 @@ Once on the IAM page, follow these steps:
 - Select the policy, then click **Add Permissions** at the bottom when finished.
 - From the **JSON** tab, select the **Import Managed Policy** link.
 	- Search for **S3**, select the `AmazonS3FullAccess` policy, and then **Import**.
-	- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
+	- You'll need your ARN from the S3 Bucket copied again, which is pasted into the "Resource" key on the Policy.
 
 		```shell
 		{
@@ -1295,9 +1293,9 @@ Once on the IAM page, follow these steps:
 	- Provide a description:
 		- "Access to S3 Bucket for Bailey Barbour Reiki static files."
 	- Click **Create Policy**.
-- From **User Groups**, click your `manage-bailey-barbour-reiki`.
+- From **User Groups**, click `manage-bailey-barbour-reiki`.
 - Click **Attach Policy**.
-- Search for the policy you've just created `decant09-bailey-barbour-reiki-policy` and select it, then **Attach Policy**.
+- Search for the policy you've just created (`decant09-bailey-barbour-reiki-policy`) and select it, then click **Attach Policy**.
 - From **User Groups**, click **Add User**.
 	- Name: `bailey-barbour-reiki-staticfiles-user`
 - For "Select AWS Access Type", select **Programmatic Access**.
@@ -1320,7 +1318,7 @@ Once on the IAM page, follow these steps:
 
 #### Final AWS Setup
 
-- Follow the steps described for [Heroku Deployment](#heroku-deployment) described later and then return here to follow these final AWS steps below.
+- Follow the steps described later for [Heroku Deployment](#heroku-deployment) and then return here to follow these final AWS steps below.
 - If Heroku Config Vars has `DISABLE_COLLECTSTATIC` still, this can be removed now, so that AWS will handle the static files.
 - Back within **S3**, create a new folder called: `media`.
 - Inside the media file select **Upload** and **Add Files**.
@@ -1360,7 +1358,7 @@ Once you've created a Gmail (Google) account and logged-in, follow these series 
 - Click on the **Accounts and Import** tab.
 - Within the section called "Change account settings", click on the link for **Other Google Account settings**.
 - This opens a page in a new tab, select **Security** on the left.
-- Select **2-Step Verification** to turn it on. (verify your password and account)
+- Select **2-Step Verification** to turn it on (verify your password and account).
 - Once verified, select **Turn On** for 2FA.
 - Navigate back to the **Security** page, and you'll see a new option called **App passwords**.
 - This might prompt you once again to confirm your password and account.
@@ -1409,8 +1407,8 @@ If you have your own packages that have been installed, then the requirements fi
 
 Create a **Procfile** at the root level of the project:
 
-- Insert `web: gunicorn app_name.wsgi:application`
-- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+- Open the Procfile and enter the following line of code: `web: gunicorn app_name.wsgi:application` and save.
+- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*.
 
 For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
 
@@ -1421,7 +1419,7 @@ Either:
 Or:
 
 - Ensure Heroku is installed for these following commands to work.
-- If it is not run `curl https://cli-assets.heroku.com/install.sh | sh` in the Terminal/CLI.
+- If it is not run `curl https://cli-assets.heroku.com/install.sh | sh` in the terminal/CLI.
 - Then connect to Heroku using this command: `heroku login -i`
 - Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
@@ -1440,8 +1438,8 @@ The steps below describe how to fork or clone the repository if desired.
 
 #### How to Clone
 1. Log in to GitHub.
-2. Navigate to the [repository](https://github.com/decant09/reik) for this website.
-3. Click on the Code button and a modal will appear.
+2. Navigate to the [repository](https://github.com/decant09/reiki) for this website.
+3. Click on the **Code** button and a modal will appear.
 4. Within this modal select the local tab.
 5. Within this tab there are HTTPS, SSH, or GitHub CLI tabs.
 6. Click on the HTTPS tab and copy the link shown.
@@ -1452,29 +1450,29 @@ The steps below describe how to fork or clone the repository if desired.
 11. In the terminal install the requirements by using the following: `pip3 install -r requirements.txt`.
 12. If you have your own packages that have been installed, then the requirements file needs to be updated using: `pip3 freeze --local > requirements.txt`.
 13. Next create the env.py file which tells our project which variables to use.
-14. Add the file to a .gitignore to prevent it from being pushed to github.
+14. Add env.py the file to a .gitignore file to prevent it from being pushed to github.
 15. Start the Django app: `python3 manage.py runserver`.
 16. Make migrations by running : `python3 manage.py makemigrations`
 17. Then migrate those changes with `python3 manage.py migrate`
-18. To run the project type python manage.py runserver into the terminal and open port 8000.
-19. This will open the project locally for you to work on.
+18. To view the website type `python3 manage.py runserver` into the terminal and open port 8000.
+19. The project is now ready to work on locally and any changes made can viewed using port 8000.
 
 [Back to top](#contents)
 
 ## Credits
 ### Code Used
-- To properly caluclate delivery charges in the Order model for the update_total function I used the code from Emma Hewson's Island Bees project on (GitHub)[https://github.com/emmahewson/island-bees/blob/main/checkout/models.py]. 
+- To properly caluclate delivery charges in the Order model for the update_total function I used the code from Emma Hewson's Island Bees project on [GitHub](https://github.com/emmahewson/island-bees/blob/main/checkout/models.py). 
 ### Resources
 - The Code Institute "Building an E-Commerce Platform" Boutique Ado project was very much relied upon to build this project.
 - Lewis M Dillon's Web Piano Academy project from [GitHub](https://github.com/LewisMDillon/web-piano-academy/tree/main) was used for the deployment steps in this README as he documented them extremely well and accurately. I aslo referred to Alan Bushell's Razor Sharp project on [GitHub](https://github.com/Alan-Bushell/razor-sharp/tree/main) for help with the README.
 - Lewid M Dillon's project was also referenced when creating some of the models for this project.
 - The layout of the site drew some inspiration from Emma Hewson's [Island Bees](https://github.com/emmahewson/island-bees/tree/main) project and also from Ally Bothroyd's [website](https://allyboothroyd.com/). Emma's project was also referenced when creating some of the models for this project.
 - Django import statements were too long for PEP8 so used parentheses as per [stackoverflow](https://stackoverflow.com/questions/17273847/long-imports-in-python).
-- Reiki FAQ content from (reiki.org)[https://www.reiki.org/faqs].
+- Reiki FAQ content was taken from the [reiki.org](https://www.reiki.org/faqs) website.
 - The business's current website, [baileybarbour.com](https://www.baileybarbour.com/), was used for the content of this site.
 ### Acknowledgements
 - My Mentor Chris Quinn for continuous helpful feedback.
 - Tutor support at Code Institute for their amazing support.
-- Alan Bushell at Code Institute for guiding the class in our weekly stand-ups.
+- Alan Bushell at Code Institute for guiding the class in our weekly stand-ups and all of my fellow students who attended these meetings regularly with me. These sessions were extremley valuable.
 
 [Back to top](#contents)
