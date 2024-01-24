@@ -557,6 +557,8 @@ An embedded mailchimp newsletter form is included in the footer of the website a
     - To reduce large jpg files
 - [Canva](https://www.canva.com)
     - Used to create the logo.
+- [Mailchimp](https://mailchimp.com/)
+    - Used to embed and implement the newletter signup feature.
 
 [Back to top](#contents)
 
