@@ -21,6 +21,7 @@ To visit the live link to Bailey Barbour Reiki on Heroku click
       - [Database Schema](#database-schema)
   - [Features](#features)
     - [Future Features](#future-features)
+  - [Business Model](#business-model)
   - [Search Engine Optimization and Social Media Marketing](#search-engine-optimization-and-social-media-marketing)
     - [Keywords](#keywords)
     - [Sitemaps](#sitemaps)
@@ -449,6 +450,9 @@ The main features of the website are documented in this section.
 - Managing the reviews of the business from the frontend is also an intended future feature. The business owner could decide from the frontend what reviews they want posted on the homepage, approve reviews, or delete them as desired instead of having to access the Django admin.
 
 [Back to top](#contents)
+
+## Business Model
+This website uses a business to customer model because it sells services and goods to customers. The business model consists of using social media including Instagram, Tiktok, Youtube and Facebook to drive traffic to the website where purchases can be made by the consumer. There is an option to sign up for a newsletter and the business is steadily growing their email list for marketing purposes. Email marketing includes selling courses, events, and 1:1 client services, as well as, updating subscribers about new free content on the business’s Youtube channel.
 
 ## Search Engine Optimization and Social Media Marketing
 In order to improve the business's visibility to search engines I used the approach of generating a list of keywords, a sitemap.xml file, and a robots.txt file. I embedded a newletter signup form in the footer and also provided a links on the website to its Facebook business page and other social media pages. 
