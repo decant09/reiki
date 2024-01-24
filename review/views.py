@@ -21,12 +21,12 @@ def review(request):
             review.save()
 
             messages.success(request, "Review successfully posted. " +
-                "Your review will be displayed once approved. " +
-                "Thank You.")
+                             "Your review will be displayed once approved. " +
+                             "Thank You.")
             return redirect(reverse('review'))
         else:
-            messages.error(request, "You didn't complete the " +
-                "required fields, please complete the form again.")
+            messages.error(request, "You didn't complete the required " +
+                           "fields, please complete the form again.")
 
     else:
         form = ReviewForm()
