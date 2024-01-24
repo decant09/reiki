@@ -7,7 +7,7 @@ class Contact(models.Model):
         verbose_name_plural = 'Contact Requests'
 
     user = models.ForeignKey(User, on_delete=models.SET_NULL,
-        null=True, blank=True, related_name="contact")
+                             null=True, blank=True, related_name="contact")
     name = models.CharField(max_length=254, null=True, blank=False)
     email = models.EmailField(max_length=254, null=True, blank=False)
     subject = models.CharField(max_length=254, null=False, blank=False)

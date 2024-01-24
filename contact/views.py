@@ -21,13 +21,13 @@ def contact(request):
             contact.user = user
             contact.save()
 
-            messages.success(request, "Message successfully sent. " +
-                "We will be in touch shortly via email with a response. " +
-                "Thank You.")
+            messages.success(request, "Message successfully sent. We will " +
+                             "be in touch shortly via email with a " +
+                             "response. Thank You.")
             return redirect(reverse('contact'))
         else:
-            messages.error(request, "You didn't complete all of the " +
-                "required fields, please complete the form again.")
+            messages.error(request, "You didn't complete all of the required" +
+                           " fields, please complete the form again.")
 
     else:
         if request.user.is_authenticated:
