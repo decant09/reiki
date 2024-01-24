@@ -524,7 +524,6 @@ An embedded mailchimp newsletter form is included in the footer of the website a
     - Cloud based image management system used for managing the images.
 - [Stripe](https://stripe.com/ie)
     - Used for online secure payments.
-
 ### Programs
 - [Gitpod](https://www.gitpod.io/)
     - Used as a cloud-based IDE for development.
@@ -553,9 +552,11 @@ An embedded mailchimp newsletter form is included in the footer of the website a
 - [XML-Sitemaps](https://www.xml-sitemaps.com)
     - Used to generate the sitemap.xml file.
 - [jpg2png](https://jpg2png.com/)
-    - To covert large jpg files to png
+    - To covert large jpg files to png.
 - [Compressjpg](https://compressjpeg.com/)
     - To reduce large jpg files
+- [Canva](https://www.canva.com)
+    - Used to create the logo.
 
 [Back to top](#contents)
 
@@ -1462,6 +1463,10 @@ The steps below describe how to fork or clone the repository if desired.
 ### Code Used
 - To properly caluclate delivery charges in the Order model for the update_total function I used the code from Emma Hewson's Island Bees project on (GitHub)[https://github.com/emmahewson/island-bees/blob/main/checkout/models.py]. 
 ### Resources
+- The Code Institute "Building an E-Commerce Platform" Boutique Ado project was very much relied upon to build this project.
+- Lewis M Dillon's Web Piano Academy project from [GitHub](https://github.com/LewisMDillon/web-piano-academy/tree/main) was used for the deployment steps in this README as he documented them extremely well and accurately. I aslo referred to Alan Bushell's Razor Sharp project on [GitHub](https://github.com/Alan-Bushell/razor-sharp/tree/main) for help with the README.
+- Lewid M Dillon's project was also referenced when creating some of the models for this project.
+- The layout of the site drew some inspiration from Emma Hewson's [Island Bees](https://github.com/emmahewson/island-bees/tree/main) project and also from Ally Bothroyd's [website](https://allyboothroyd.com/). Emma's project was also referenced when creating some of the models for this project.
 - Django import statements were too long for PEP8 so used parentheses as per [stackoverflow](https://stackoverflow.com/questions/17273847/long-imports-in-python).
 - Reiki FAQ content from (reiki.org)[https://www.reiki.org/faqs].
 
