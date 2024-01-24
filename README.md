@@ -675,19 +675,267 @@ An embedded mailchimp newsletter form is included in the footer of the website a
 
 ### PEP8 Validator
 #### Python
-- Project (reiki) urls
+- Cart apps.py
     <details>
     <summary>All clear, no errors found.</summary>
-    <img src="static/images/readme/testing/python/project_urls.png">
+    <img src="media/readme/testing/pep8_validator/pep8_cart_apps.png">
     </details>
-
-- Products urls (etc all .py files)
+- Cart contexts.py
     <details>
     <summary>All clear, no errors found.</summary>
-    <img src="static/images/readme/testing/python/blog_urls.png">
+    <img src="media/readme/testing/pep8_validator/pep8_cart_contexts.png">
+    </details>
+- Cart urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_cart_urls.png">
+    </details>
+- Cart views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_cart_views.png">
+    </details>
+- Checkout admin.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_admin.png">
+    </details>
+- Checkout apps.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_apps.png">
+    </details>
+- Checkout forms.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_forms.png">
+    </details>
+- Checkout init.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_init.png">
+    </details>
+- Checkout models.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_models.png">
+    </details>
+- Checkout signals.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_signals.png">
+    </details>
+- Checkout urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_urls.png">
+    </details>
+- Checkout views.py
+    <details>
+    <summary>72: E501 line too long (81 > 79 characters) - required to function correctly.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_views.png">
+    </details>
+- Checkout webhook_handler.py
+    <details>
+    <summary>142: E501 line too long (81 > 79 characters) - required to function correctly.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_webhook_handler.png">
+    </details>
+- Checkout webhook.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_checkout_webhook.png">
+    </details>
+- Contact admin.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_contact_admin.png">
+    </details>
+- Contact apps.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_contact_apps.png">
+    </details>
+- Contact forms.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_contact_forms.png">
+    </details>
+- Contact models.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_contact_models.png">
+    </details>
+- Contact urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_contact_urls.png">
+    </details>
+- Contact views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_contact_views.png">
+    </details>
+- custom_storages.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_custom_storages.png">
+    </details>
+- Faq admin.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_faq_admin.png">
+    </details>
+- Faq apps.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_faq_apps.png">
+    </details>
+- Faq models.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_faq_models.png">
+    </details>
+- Faq urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_faq_urls.png">
+    </details>
+- Faq views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_faq_views.png">
+    </details>
+- Home apps.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_home_apps.png">
+    </details>
+- Home views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_home_views.png">
+    </details>
+- manage.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_manage.png">
+    </details>
+- Products admin.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_products_admin.png">
+    </details>
+- Products apps.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_products_apps.png">
+    </details>
+- Products forms.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_products_forms.png">
+    </details>
+- Products models.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_products_models.png">
+    </details>
+- Products urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_products_urls.png">
+    </details>
+- Products views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_products_views.png">
+    </details>
+- Products widgets.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_products_widgets.png">
+    </details>
+- Profiles admin.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_profiles_admin.png">
+    </details>
+- Profiles apps.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_profiles_apps.png">
+    </details>
+- Profiles forms.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_profiles_forms.png">
+    </details>
+- Profiles models.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_profiles_models.png">
+    </details>
+- Profiles urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_profiles_urls.png">
+    </details>
+- Profiles views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_profiles_views.png">
+    </details>
+- Reiki Project asgi.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_reiki_project_asgi.png">
+    </details>
+- Reiki Project urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_reiki_project_urls.png">
+    </details>
+- Reiki Project views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_reiki_project_views.png">
+    </details>
+- Reiki Project wsgi.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_reiki_project_wsgi.png">
+    </details>
+- Review admin.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_review_admin.png">
+    </details>
+- Review apps.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_review_apps.png">
+    </details>
+- Review forms.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_review_forms.png">
+    </details>
+- Review models.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_review_models.png">
+    </details>
+- Review urls.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_review_urls.png">
+    </details>
+- Review views.py
+    <details>
+    <summary>All clear, no errors found.</summary>
+    <img src="media/readme/testing/pep8_validator/pep8_review_views.png">
     </details>
 
-- 
 
 ### Accessibility
 #### WebAIM
