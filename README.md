@@ -764,6 +764,7 @@ Google Lighthouse was used to test for accessibility for each page.
 - On the cart page the delivery charge was being calculated and including items that were not subject to delivery charge. After playing around with the code a few times and testing a few different scenarios arose where the delivery charge was not being applied correctly. I had created code within an if block to account for items that had delivery_charge is True. After realising that the location of the if blocks were not indented correctly I amended their position and this resolved the error.
 - The MEDIA_URL template was not working for products with no images. This was because the contexts processor was not included in the templates settings. 
 - When trying to link the static css file for the checkout app to the checkout.html page it was not working. This was due to the fact that my file structure was incorrect. I was missing a checkout folder within the static folder. I entered the css folder with the checkout.css file into this folder and the issue recolved.
+- Error pages content overflowed onto the footer and adding new CSS classes resolved this.
 [Back to top](#contents)
 
 ## Deployment and Local Development
