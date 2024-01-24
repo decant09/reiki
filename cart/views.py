@@ -18,7 +18,7 @@ def add_to_cart(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    size=None
+    size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     cart = request.session.get('cart', {})
@@ -43,7 +43,7 @@ def add_to_cart(request, item_id):
                 request, f'Added size {size.upper()} {product.name} to your \
                 cart'
                 )
-    else:    
+    else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
             messages.success(
@@ -99,7 +99,6 @@ def adjust_cart(request, item_id):
 def remove_from_cart(request, item_id):
     """Remove product from cart"""
 
-    
     try:
         product = get_object_or_404(Product, pk=item_id)
         size = None
