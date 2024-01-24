@@ -700,10 +700,13 @@ Google Lighthouse was used to test for accessibility for each page.
 
 | Test |Result  |
 |--|--|
+| Grand total calculated correctly | Pass |
+| Delivery charges calculated correctly | Pass |
 | Non logged in user can successfully checkout and pay | Pass |
 | Logged in user can successfully checkout and pay | Pass |
 | Email confirmation of order sent | Pass |
 | On successful payment redirected to checkout success page | Pass |
+| Checkout success page contains order information | Pass |
 | Checkout form notifies user if required information is missing | Pass |
 | Deleting a post deletes all of its data and linked comments | Pass |
 | Stripe webhooks function as intended | Pass |
@@ -755,6 +758,7 @@ Google Lighthouse was used to test for accessibility for each page.
 #### Known
 - When you add a product to the cart that is not subject to a delivery charge and is under the free delivery threshold you still get a message displayed to say spend more to avail of free delivery. Rearranging the code in the toast_success.html file and using an if statement with item.product.delivery_charge == True could be used but I was not able to find the correct structure to implement this. There are a few different scenarios, such the cart having a product with a delivery charge and a product without a delivery charge and the grand total still being under the free delivery threshold. In that case a delivery charge is applicable to one item so the message should still appear.
 - Inactive products do not show up on the all products page but they do show up on the page that is filtered by category. I possibly need to introduce an is_active filter to the products in the context in the views.py.
+- Deleting an order in the admin panel returns a 500 Internal Sever Error. I was not fully able to investigate this as it was close to submission when I discovered it. 
 #### Solved
 - After applying the logic to filter products by category I was not able to view the page upon clicking on the navbar link. Clicking on the link did not yield any action. The expected action was that the product page would display with the filter applied for the specific category. I realized that there were data-toggle="dropdown" and aria-expanded="False" attributes in the anchor element. The navbar items had previously been dropdowns with these attributes but I had amended them to simple links without removing them. Removing the attributes resolved the issue.
 - On the cart page the delivery charge was being calculated and including items that were not subject to delivery charge. After playing around with the code a few times and testing a few different scenarios arose where the delivery charge was not being applied correctly. I had created code within an if block to account for items that had delivery_charge is True. After realising that the location of the if blocks were not indented correctly I amended their position and this resolved the error.
