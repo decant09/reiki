@@ -657,10 +657,20 @@ An embedded mailchimp newsletter form is included in the footer of the website a
 
 ### JShint
 #### JavaScript
-- Script Tags  
+- Countryfield  
     <details>
     <summary>Result - No warnings.</summary>
-    <img src="static/images/readme/testing/javascript/jshint.png">
+    <img src="media/readme/testing/jshint/jshint_countryfield.png">
+    </details>  
+- Quantity Input  
+    <details>
+    <summary>Result - Seven warnings.</summary>
+    <img src="media/readme/testing/jshint/jshint_quantity_input.png">
+    </details>  
+- Stripe Elements  
+    <details>
+    <summary>Result - One undefined variable Stripe.</summary>
+    <img src="media/readme/testing/jshint/jshint_quantity_input.png">
     </details>  
 
 ### PEP8 Validator
