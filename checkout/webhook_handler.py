@@ -27,7 +27,7 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
@@ -102,7 +102,7 @@ class StripeWH_Handler:
                 )
                 order_exists = True
                 break
-                        
+
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
@@ -129,7 +129,7 @@ class StripeWH_Handler:
                     original_cart=cart,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(cart).items():                    
+                for item_id, item_data in json.loads(cart).items():
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
@@ -139,8 +139,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data(
-                            ['items_by_size'].items()):
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -160,7 +159,6 @@ class StripeWH_Handler:
             content=f'Webhook received: {event["type"]} | ' +
             'SUCCESS: Created order in webhook',
             status=200)
-
 
     def handle_payment_intent_payment_failed(self, event):
         """

@@ -15,6 +15,7 @@ from cart.contexts import cart_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -38,7 +39,7 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
-        
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -83,7 +84,7 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
-            
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(
                 reverse('checkout_success', args=[order.order_number])
@@ -97,7 +98,8 @@ def checkout(request):
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(request,
-                "There's nothing in your cart at the moment")
+                           "There's nothing in your cart at the moment")
+
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -111,7 +113,7 @@ def checkout(request):
 
         """Attempt to prefill the form with any info the user
         maintains in their profile"""
-        
+
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
