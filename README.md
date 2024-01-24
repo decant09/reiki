@@ -203,7 +203,7 @@ The blog wireframes were created although in the end this feature does not exist
 </details>
 
 #### Database Schema
-Pre-project planning involved generating an entity relationship diagram. This was done in order to create a clear plan as to how all of the database models interact with each other. This was also done to determine what data fields were needed for each model.
+Pre-project planning involved generating an entity relationship diagram. This was done in order to create a clear plan as to how all of the database models interact with each other. This was also done to determine what data fields were needed for each model. The Blog model was not implemented in this project due to time contraints. The relationship between each model and another is noted in the diagram with "FK" denoting Foreign Key. A One To One relationship exists between the User model and the UserProfile model.
 <details>
 <summary>Entity Relationship Diagram</summary>
 <img src="media/readme/database/lucid_erd_diagram.png">
