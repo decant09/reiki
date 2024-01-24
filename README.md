@@ -552,10 +552,90 @@ An embedded mailchimp newsletter form is included in the footer of the website a
 
 ### W3C Validator
 #### HTML
-- Page (page.html)  
+- Benefits  
     <details>
-    <summary>Result - No errors or warnings to show.</summary>
-    <img src="static/images/readme/testing/html/html_validator_comment_delete.png">
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_benefits.png">
+    </details>  
+- Biography
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_biography.png">
+    </details>  
+- Cart
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_cart.png">
+    </details>  
+- Checkout Success
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_checkout_success.png">
+    </details>  
+- Checkout
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_checkout.png">
+    </details>  
+- Contact
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_contact.png">
+    </details>  
+- FAQ
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_faq.png">
+    </details>  
+- Index
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_index.png">
+    </details>  
+- Privacy Policy
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_privacy_policy.png">
+    </details>  
+- Product Add
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_product_add.png">
+    </details>  
+- Product Details
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_product_details.png">
+    </details>  
+- Product Edit
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_product_edit.png">
+    </details>  
+- Products
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_products.png">
+    </details>  
+- Profile
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_profile.png">
+    </details>  
+- Review
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_review.png">
+    </details>  
+- Terms & Conditions
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_terms_conditions.png">
+    </details>  
+- What is Reiki
+    <details>
+    <summary>Result - No errors</summary>
+    <img src="media/readme/testing/html_validator/html_val_what_is_reiki.png">
     </details>  
 
 #### CSS
