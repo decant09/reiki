@@ -606,11 +606,61 @@ I tested for contrast using the [WAVE web evaluation teting tool](https://wave.w
 </details>
 
 #### Google Lighthouse
-Google Lighthouse was used to test for accessibility for each page.
-- Page (page.html)  
+Google Lighthouse was used to test for accessibility for each page. Some minor accesibility and performance issues exist and time did not pemmit me amending these. I did not test pages that were similar in layout to the biography page.
+- Biography  
     <details>
-    <summary>Result - 100</summary>
-    <img src="static/images/readme/testing/lighthouse/comment_delete.png">
+    <summary>Result - 78</summary>
+    <img src="media/readme/testing/lighthouse/lh_biography.png">
+    </details>
+- Cart  
+    <details>
+    <summary>Result - 91</summary>
+    <img src="media/readme/testing/lighthouse/lh_cart.png">
+    </details>
+- Checkout  
+    <details>
+    <summary>Result - 84</summary>
+    <img src="media/readme/testing/lighthouse/lh_checkout.png">
+    </details>
+- Checkout Success  
+    <details>
+    <summary>Result - 91</summary>
+    <img src="media/readme/testing/lighthouse/lh_checkout_success.png">
+    </details>
+- Contact  
+    <details>
+    <summary>Result - 91</summary>
+    <img src="media/readme/testing/lighthouse/lh_contact.png">
+    </details>
+- FAQ  
+    <details>
+    <summary>Result - 91</summary>
+    <img src="media/readme/testing/lighthouse/lh_faq.png">
+    </details>
+- Index  
+    <details>
+    <summary>Result - 89</summary>
+    <img src="media/readme/testing/lighthouse/lh_index.png">
+    </details>
+- Product Details  
+    <details>
+    <summary>Result - 75</summary>
+    <img src="media/readme/testing/lighthouse/lh_product_details.png">
+    </details>
+- Products  
+    <details>
+    <summary>Result - 91</summary>
+    <img src="media/readme/testing/lighthouse/lh_products.png">
+    </details>
+- Profile  
+    <details>
+    <summary>Result - 89</summary>
+    <img src="media/readme/testing/lighthouse/lh_profile.png">
+    </details>
+- Review  
+    <details>
+    <summary>Result - 91</summary>
+    <img src="media/readme/testing/lighthouse/lh_review.png">
     </details>
 
 
