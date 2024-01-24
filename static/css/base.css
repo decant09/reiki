@@ -262,6 +262,7 @@ footer {
         text-align: center;
     }
 
+    .error-msg,
     .hero-header {
         font-size: 2rem;
     }
