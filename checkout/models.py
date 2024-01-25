@@ -50,7 +50,8 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs on items which
         charge for delivery.
-        Code from github.com/emmahewson/island-bees/
+        Code from
+        github.com/emmahewson/island-bees/blob/main/checkout/models.py
         """
 
         # Calculates the order total without delivery
