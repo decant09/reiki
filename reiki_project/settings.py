@@ -10,6 +10,21 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import environ
+
+# Initialize environment variables
+env = environ.Env(
+    DEBUG=(bool, False),  # Default to False if not set
+)
+
+# Explicitly load the .env file
+environ.Env.read_env(env_file='.env')
+
+# Use the environment variables
+DEBUG = env.bool('DEBUG', default=False)  # Correctly cast DEBUG as a boolean
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+
+
 import dj_database_url
 from pathlib import Path
 
@@ -28,9 +43,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ #old
+DEBUG = env.bool('DEBUG', default=False)
+
+if os.environ.get('DEBUG') == 'DEVELOPMENT':
+    DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
     '8000-decant09-reiki-rgrw0003uml.ws-eu107.gitpod.io',
     'decant09-bailey-barbour-reiki-c1328d81ff2e.herokuapp.com',
 ]
@@ -233,4 +254,4 @@ else:
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    DEFAULT_FROM_EMAIL = 'info@baileybarbourreiki.com'
